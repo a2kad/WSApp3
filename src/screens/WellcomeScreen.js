@@ -28,7 +28,7 @@ const WellcomeScreen = () => {
                 <View className="flex-row justify-center">
                     <Text className="font-semibold text-gray-900 my-4">Vous avez déjà un compte ? </Text>
                     <TouchableOpacity onPress={()=> navigation.navigate('Login')}>
-                        <Text className="font-semibold text-yellow-500 my-4"> Se connecter</Text>
+                        <Text className="font-semibold text-yellow-500 my-4">Se connecter</Text>
                     </TouchableOpacity>
                 </View>
             </View>

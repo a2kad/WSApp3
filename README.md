@@ -36,3 +36,11 @@ Istallation :
 npm install react-native-responsive-screen --save
 ```
 [Documentation ici](https://www.npmjs.com/package/react-native-responsive-screen)
+
+### Firebase 
+
+Istallation :
+```
+npm install fierebase
+```
+[Documentation ici](https://firebase.google.com/docs)
