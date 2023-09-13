@@ -44,3 +44,9 @@ Istallation :
 npm install fierebase
 ```
 [Documentation ici](https://firebase.google.com/docs)
+
+### react-native-async-storage
+
+```
+npm i @react-native-async-storage/async-storage
+```

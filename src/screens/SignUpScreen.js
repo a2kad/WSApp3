@@ -13,6 +13,7 @@ const SignUpScreen = () => {
         if (email && password){
             try{
                 await createUserWithEmailAndPassword(auth, email, password)
+                navigation.navigate('SignUpName')
             }catch(err){
                 console.log('Got error', err.message);
             }
@@ -23,11 +24,11 @@ const SignUpScreen = () => {
             <View className='flex-1 flex justify-around m-4' >
                 <Text className='font-bold text-4xl leading-10 text-gray-700 text-center my-2'>Bienvenue sur{"\n"}Web Solidarité App</Text>
             <View className='flex justify-center mx-4'>
-                <Text className='text-2xl text-gray-500'>Renseigner votre numéro de téléphone et e-mail pour continuer</Text>
+                <Text className='text-2xl text-gray-500'>Renseigner votre e-mail et mot de passe pour continuer</Text>
             </View>
             <View className='mx-4 '>
-                <Text className='text-gray-700 my-2 p-2'>Numéro de téléphone</Text>
-                <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Téléphone'></TextInput>
+                {/* <Text className='text-gray-700 my-2 p-2'>Numéro de téléphone</Text>
+                <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Téléphone'></TextInput> */}
                 <Text className='text-gray-700 my-2 p-2'>E-mail</Text>
                 <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' placeholder='E-mail'
                 value={email} onChangeText={value=>setEmail(value)}></TextInput>
@@ -45,8 +46,6 @@ const SignUpScreen = () => {
                             Continuer
                         </Text>
                 </TouchableOpacity>
-                
-                
             </View>
             </View>
         </SafeAreaView>

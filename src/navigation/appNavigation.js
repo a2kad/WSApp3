@@ -17,6 +17,7 @@ export default function AppNavigation() {
             <NavigationContainer>
                 <Stack.Navigator initialRouteName='Home'>
                     <Stack.Screen name='Home' options={{headerShown: false}} component={HomeScreen} />
+                    <Stack.Screen name="SignUpName" options={{headerShown: false}} component={SignUpNameScreen} />
                 </Stack.Navigator>
             </NavigationContainer>
         )
@@ -27,7 +28,6 @@ export default function AppNavigation() {
                     <Stack.Screen name='Wellcome' options={{headerShown: false}} component={WellcomeScreen} />
                     <Stack.Screen name='Login' options={{headerShown: false}} component={LoginScreen} />
                     <Stack.Screen name="SignUp" options={{headerShown: false}} component={SignUpScreen} />
-                    <Stack.Screen name="SignUpName" options={{headerShown: false}} component={SignUpNameScreen} />
                 </Stack.Navigator>
             </NavigationContainer>
         )

@@ -12,7 +12,8 @@ const LoginScreen = () => {
     const handleSubmit = async ()=>{
         if (email && password){
             try{
-                await signInWithEmailAndPassword(auth, email, password)
+                await signInWithEmailAndPassword(auth, email, password);
+                
             }catch(err){
                 console.log('Got error', err.message);
             }
