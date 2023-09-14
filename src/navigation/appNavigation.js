@@ -5,6 +5,8 @@ import WellcomeScreen from '../screens/WellcomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import SignUpNameScreen from '../screens/SignUpNameScreen';
+import Question1Screen from '../screens/questions/Question1Screen';
+import Question2Screen from '../screens/questions/Question2Screen';
 import useAuth from '../hooks/useAuth';
 import HomeScreen from '../screens/HomeScreen';
 
@@ -18,6 +20,8 @@ export default function AppNavigation() {
                 <Stack.Navigator initialRouteName='Home'>
                     <Stack.Screen name='Home' options={{headerShown: false}} component={HomeScreen} />
                     <Stack.Screen name="SignUpName" options={{headerShown: false}} component={SignUpNameScreen} />
+                    <Stack.Screen name="Question1" options={{headerShown: false}} component={Question1Screen} />
+                    <Stack.Screen name="Question2" options={{headerShown: false}} component={Question2Screen} />
                 </Stack.Navigator>
             </NavigationContainer>
         )

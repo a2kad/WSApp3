@@ -9,14 +9,16 @@ const LoginScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = async ()=>{
-        if (email && password){
-            try{
+    const handleSubmit = async () => {
+        if (email && password) {
+            try {
                 await signInWithEmailAndPassword(auth, email, password);
-                
-            }catch(err){
+
+            } catch (err) {
                 console.log('Got error', err.message);
             }
+        } else {
+            
         }
     }
     return (
@@ -28,11 +30,11 @@ const LoginScreen = () => {
                 </View>
                 <View className='mx-4 '>
                     <Text className='text-gray-700 my-2 p-2'>E-mail</Text>
-                    <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' 
-                    value={email} onChangeText={value=>setEmail(value)}></TextInput>
+                    <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl'
+                        value={email} onChangeText={value => setEmail(value)}></TextInput>
                     <Text className='text-gray-700 my-2 p-2'>Mot de passe</Text>
-                    <TextInput secureTextEntry className='p-4 bg-gray-200 text-gray-700 rounded-2xl' 
-                    value={password} onChangeText={value=>setPassword(value)}></TextInput>
+                    <TextInput secureTextEntry className='p-4 bg-gray-200 text-gray-700 rounded-2xl'
+                        value={password} onChangeText={value => setPassword(value)}></TextInput>
 
                 </View>
                 <View className="space-y-4">

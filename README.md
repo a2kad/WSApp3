@@ -47,6 +47,7 @@ npm install fierebase
 
 ### react-native-async-storage
 
+Istallation :
 ```
 npm i @react-native-async-storage/async-storage
 ```
