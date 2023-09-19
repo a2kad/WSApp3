@@ -3,7 +3,7 @@ import React from 'react'
 import { signOut } from 'firebase/auth'
 import { auth } from '../config/firebase'
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
     const handleLogout = async ()=>{
         await signOut(auth);
     }

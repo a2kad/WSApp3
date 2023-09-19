@@ -51,3 +51,10 @@ Istallation :
 ```
 npm i @react-native-async-storage/async-storage
 ```
+## Ajouté "Drower"
+``` 
+npm install @react-navigation/drawer
+npm install react-native-gesture-handler react-native-reanimated
+```
+[Istallation](https://reactnavigation.org/docs/drawer-navigator/#installation)
+[Documentation ici](https://reactnavigation.org/docs/drawer-based-navigations)
