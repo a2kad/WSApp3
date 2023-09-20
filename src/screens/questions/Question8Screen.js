@@ -1,6 +1,7 @@
 import { View, Text, SafeAreaView, TouchableOpacity, FlatList } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
+import { Counter } from '../../features/counter/Counter';
 
 export default function Question1Screen() {
     const navigation = useNavigation();
@@ -26,11 +27,7 @@ export default function Question1Screen() {
             </View>
             <View className='flex-row justify-around mb-11'>
 
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('Question9')}
-                    className="py-3 px-7 bg-yellow-400 mx-7 rounded-xl">
-                    <Text className="text-xl font-bold text-center text-gray-700">Oui</Text>
-                </TouchableOpacity>
+                <Counter next='Question9' />
 
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Question9')}

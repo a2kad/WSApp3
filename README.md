@@ -59,3 +59,9 @@ npm install react-native-gesture-handler react-native-reanimated
 ```
 [Istallation](https://reactnavigation.org/docs/drawer-navigator/#installation)
 [Documentation ici](https://reactnavigation.org/docs/drawer-based-navigations)
+
+## Redux pour la notation des questions
+``` 
+npm install @reduxjs/toolkit react-redux
+```
+[Documentation ici](https://redux.js.org/tutorials/quick-start)

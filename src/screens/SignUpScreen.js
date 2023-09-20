@@ -50,7 +50,8 @@ const SignUpScreen = () => {
                 </View>
                 <View className="space-y-4">
                     <TouchableOpacity
-                        onPress={storeData}
+                        //onPress={storeData}
+                        onPress={()=>navigation.navigate('Question1')}
                         className="py-3 bg-yellow-400 mx-7 rounded-xl">
                         <Text
                             className="text-xl font-bold text-center text-gray-700"

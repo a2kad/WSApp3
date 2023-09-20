@@ -7,8 +7,6 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 export default function Question1Screen() {
     const navigation = useNavigation();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
 
     const getData = async () => {
         try {
@@ -17,27 +15,12 @@ export default function Question1Screen() {
             console.log('Login : ',email)
             console.log('Pass : ',password)
             await createUserWithEmailAndPassword(auth, email, password);
-            if (email !== null) {
-                setEmail(email)
-            }
-            if (password !== null) {
-                setPassword(password)
-            }
+            
         } catch (e) {
             console.log('Read async data error : ',e.message)
         }
     };
 
-    const handleSubmit = async () => {
-        if (email && password) {
-            try {
-                await createUserWithEmailAndPassword(auth, email, password)
-                //navigation.navigate('SignUpName')
-            } catch (err) {
-                console.log('Got error', err.message);
-            }
-        }
-    }
     return (
         <SafeAreaView className='flex-1'>
             <View className='flex-1 justify-top items-center m-6'>
