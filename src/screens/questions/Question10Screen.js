@@ -4,9 +4,12 @@ import { useNavigation } from '@react-navigation/native';
 import { auth } from '../../config/firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { LastCounter } from '../../features/counter/LastCounter';
+import { useSelector } from 'react-redux';
 
 export default function Question1Screen() {
     const navigation = useNavigation();
+    const count = useSelector(state => state.counter.value);
 
     const getData = async () => {
         try {
@@ -31,7 +34,10 @@ export default function Question1Screen() {
                     <Text className='text-justify text-xl text-gray-500'>Seriez-vous en mesure d'identifier la taille d'un fichier (photo, PDF, audio, vidéo) ?</Text>
                 </View>
             </View>
-            <View className='flex-row justify-around mb-11'>
+
+            <LastCounter />
+
+            {/* <View className='flex-row justify-around mb-11'>
 
                 <TouchableOpacity
                     onPress={getData}
@@ -44,7 +50,7 @@ export default function Question1Screen() {
                     className="py-3 px-7 bg-yellow-400 mx-7 rounded-xl">
                     <Text className="text-xl font-bold text-center text-gray-700">Non</Text>
                 </TouchableOpacity>
-            </View>
+            </View> */}
         </SafeAreaView>
     )
 }

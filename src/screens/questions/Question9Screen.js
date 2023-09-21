@@ -2,9 +2,11 @@ import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { Counter } from '../../features/counter/Counter';
+import { useSelector } from 'react-redux';
 
 export default function Question1Screen() {
     const navigation = useNavigation();
+    const count = useSelector(state => state.counter.value);
     return (
         <SafeAreaView className='flex-1'>
             <View className='flex-1 justify-top items-center m-6'>
@@ -13,6 +15,7 @@ export default function Question1Screen() {
                 </View>
                 <View className='flex justify-center mx-2'>
                     <Text className='text-justify text-xl text-gray-500'>Maitrisez-vous les functionalités sur l’application Ameli.fr? </Text>
+                    <Text>{count}</Text>
                 </View>
             </View>
             <View className='flex-row justify-around mb-11'>

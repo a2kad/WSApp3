@@ -22,6 +22,8 @@ import useAuth from '../hooks/useAuth';
 import HomeScreen from '../screens/HomeScreen';
 import ProductScreen from '../screens/ProductScreen';
 import FormationScreen from '../screens/FormationScreen';
+import ResultatFormation from '../screens/questions/ResultatFormation';
+import ResultatProduits from '../screens/questions/ResultatProduits';
 
 
 
@@ -73,6 +75,8 @@ export default function AppNavigation() {
                     <Stack.Screen name="Question8" options={{ headerShown: false }} component={Question8Screen} />
                     <Stack.Screen name="Question9" options={{ headerShown: false }} component={Question9Screen} />
                     <Stack.Screen name="Question10" options={{ headerShown: false }} component={Question10Screen} />
+                    <Stack.Screen name="ResultatFormation" options={{ headerShown: false }} component={ResultatFormation} />
+                    <Stack.Screen name="ResultatProduits" options={{ headerShown: false }} component={ResultatProduits} />
                 </Stack.Navigator>
                 
             </NavigationContainer>
