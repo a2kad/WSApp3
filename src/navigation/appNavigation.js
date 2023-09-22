@@ -24,6 +24,9 @@ import ProductScreen from '../screens/ProductScreen';
 import FormationScreen from '../screens/FormationScreen';
 import ResultatFormation from '../screens/questions/ResultatFormation';
 import ResultatProduits from '../screens/questions/ResultatProduits';
+import { HomeIcon } from "react-native-heroicons/mini";
+import { ShoppingCartIcon } from "react-native-heroicons/mini";
+import { AcademicCapIcon } from "react-native-heroicons/mini";
 
 
 
@@ -35,24 +38,10 @@ export default function AppNavigation() {
     if (user) {
         return (
             <NavigationContainer>
-                {/* <Stack.Navigator initialRouteName='Home'>
-                    <Stack.Screen name='Home' options={{ headerShown: true }} component={HomeScreen} />
-                    <Stack.Screen name="SignUpName" options={{ headerShown: false }} component={SignUpNameScreen} />
-                    <Stack.Screen name="Question1" options={{ headerShown: false }} component={Question1Screen} />
-                    <Stack.Screen name="Question2" options={{ headerShown: false }} component={Question2Screen} />
-                    <Stack.Screen name="Question3" options={{ headerShown: false }} component={Question3Screen} />
-                    <Stack.Screen name="Question4" options={{ headerShown: false }} component={Question4Screen} />
-                    <Stack.Screen name="Question5" options={{ headerShown: false }} component={Question5Screen} />
-                    <Stack.Screen name="Question6" options={{ headerShown: false }} component={Question6Screen} />
-                    <Stack.Screen name="Question7" options={{ headerShown: false }} component={Question7Screen} />
-                    <Stack.Screen name="Question8" options={{ headerShown: false }} component={Question8Screen} />
-                    <Stack.Screen name="Question9" options={{ headerShown: false }} component={Question9Screen} />
-                    <Stack.Screen name="Question10" options={{ headerShown: false }} component={Question10Screen} />
-                </Stack.Navigator> */}
-                <Drawer.Navigator initialRouteName="Home">
-                    <Drawer.Screen name="Home" options={{drawerLabel: 'Accueil', title:'Accueil'}} component={HomeScreen} />
-                    <Drawer.Screen name="Products" component={ProductScreen} />
-                    <Drawer.Screen name="Formations" component={FormationScreen} />
+                <Drawer.Navigator initialRouteName="Home" screenOptions={{ drawerLabelStyle:{marginLeft:-25, fontSize:15}}}>
+                    <Drawer.Screen name="Home" options={{drawerLabel: 'Accueil', title:'Accueil', drawerIcon:()=>(<HomeIcon color='#9ca3af'  size={24} />)}} component={HomeScreen} />
+                    <Drawer.Screen name="Products" options={{drawerLabel: 'Products', title:'Products', drawerIcon:()=>(<ShoppingCartIcon color='#9ca3af'  size={24} />)}} component={ProductScreen} />
+                    <Drawer.Screen name="Formations" options={{drawerLabel: 'Formations', title:'Formations', drawerIcon:()=>(<AcademicCapIcon color='#9ca3af'  size={24} />)}}component={FormationScreen} />
                 </Drawer.Navigator>
             </NavigationContainer>
 

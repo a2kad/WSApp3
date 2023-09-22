@@ -65,3 +65,8 @@ npm install react-native-gesture-handler react-native-reanimated
 npm install @reduxjs/toolkit react-redux
 ```
 [Documentation ici](https://redux.js.org/tutorials/quick-start)
+
+## HeroIcons react-native-heroicons
+``` 
+npm i react-native-heroicons react-native-svg
+```
