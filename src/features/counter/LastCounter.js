@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment } from './counterSlice'
 import { View, Text, TouchableOpacity } from 'react-native'
@@ -9,9 +9,11 @@ export const LastCounter = () => {
     const navigation = useNavigation();
     const count = useSelector(state => state.counter.value)
     const dispatch = useDispatch()
+    const [buttonDis, setButtonDis ] = useState(false)
 
 
     const addPoint = () => {
+        setButtonDis(true);
         dispatch(increment());
         if (count <= 5) {
             navigation.navigate('ResultatFormation');
@@ -20,7 +22,6 @@ export const LastCounter = () => {
             navigation.navigate('ResultatProduits');
             console.log('Go produits. Count : ', count)
         }
-
     }
 
     const zeroPoint = () => {
@@ -40,6 +41,7 @@ export const LastCounter = () => {
         className='flex-row justify-around mb-11'>
     <TouchableOpacity 
         onPress={addPoint}
+        disabled={buttonDis}
         style={{backgroundColor:'#facc15', paddingVertical:12, paddingHorizontal:28, marginHorizontal:28, borderRadius:12}} >
         <Text 
         style={{fontSize:20, fontWeight:'700', color:'#374151', textAlign:'center'}}

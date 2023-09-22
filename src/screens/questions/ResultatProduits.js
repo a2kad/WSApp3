@@ -29,7 +29,7 @@ export default function ResultatFormation() {
                 </View>
                 <View className='flex justify-center mx-5'>
                     <Text className='text-justify text-xl text-gray-500'>Bravo!</Text>
-                    <Text className='text-justify text-xl text-gray-500 my-2'>Nous vous suggérons d'acheter un ordinateur reconditionné à un prix solidaire.</Text>
+                    <Text className='text-justify text-xl text-gray-500 my-2'>Nous vous suggérons d'acheter un ordinateur reconditionné à un prix solidaire pour un impact écologique .</Text>
                 </View>
                 <View className="space-y-4">
                     <TouchableOpacity
