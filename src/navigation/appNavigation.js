@@ -27,7 +27,7 @@ import ResultatProduits from '../screens/questions/ResultatProduits';
 import { HomeIcon } from "react-native-heroicons/mini";
 import { ShoppingCartIcon } from "react-native-heroicons/mini";
 import { AcademicCapIcon } from "react-native-heroicons/mini";
-
+import CustomDrawer from '../screens/CustomDrawer';
 
 
 const Stack = createNativeStackNavigator();
@@ -38,11 +38,14 @@ export default function AppNavigation() {
     if (user) {
         return (
             <NavigationContainer>
-                <Drawer.Navigator initialRouteName="Home" screenOptions={{ drawerLabelStyle:{marginLeft:-25, fontSize:15}}}>
+                <Drawer.Navigator drawerContent={props =><CustomDrawer {...props}/>} initialRouteName="Home" screenOptions={{ drawerLabelStyle:{marginLeft:-25, fontSize:15}}}>
                     <Drawer.Screen name="Home" options={{drawerLabel: 'Accueil', title:'Accueil', drawerIcon:()=>(<HomeIcon color='#9ca3af'  size={24} />)}} component={HomeScreen} />
                     <Drawer.Screen name="Products" options={{drawerLabel: 'Products', title:'Products', drawerIcon:()=>(<ShoppingCartIcon color='#9ca3af'  size={24} />)}} component={ProductScreen} />
-                    <Drawer.Screen name="Formations" options={{drawerLabel: 'Formations', title:'Formations', drawerIcon:()=>(<AcademicCapIcon color='#9ca3af'  size={24} />)}}component={FormationScreen} />
+                    <Drawer.Screen name="Formations" options={{drawerLabel: 'Formations', title:'Formations', drawerIcon:()=>(<AcademicCapIcon color='#9ca3af'  size={24} />)}} component={FormationScreen} />
+                    
                 </Drawer.Navigator>
+                
+            
             </NavigationContainer>
 
         )

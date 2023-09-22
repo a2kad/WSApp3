@@ -70,3 +70,5 @@ npm install @reduxjs/toolkit react-redux
 ``` 
 npm i react-native-heroicons react-native-svg
 ```
+[Documentation ici](https://www.npmjs.com/package/react-native-heroicons)
+[HeroIcons.com/](https://heroicons.com/)
