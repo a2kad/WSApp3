@@ -38,10 +38,17 @@ export default function AppNavigation() {
     if (user) {
         return (
             <NavigationContainer>
-                <Drawer.Navigator drawerContent={props =><CustomDrawer {...props}/>} initialRouteName="Home" screenOptions={{ drawerLabelStyle:{marginLeft:-25, fontSize:15}, drawerActiveBackgroundColor:'#fef9c3', drawerActiveTintColor:'#27272a'}}>
-                    <Drawer.Screen name="Home" options={{drawerLabel: 'Accueil', title:'Accueil', drawerIcon:()=>(<HomeIcon color='#9ca3af'  size={24} />)}} component={HomeScreen} />
-                    <Drawer.Screen name="Products" options={{drawerLabel: 'Products', title:'Products', drawerIcon:()=>(<ShoppingCartIcon color='#9ca3af'  size={24} />)}} component={ProductScreen} />
-                    <Drawer.Screen name="Formations" options={{drawerLabel: 'Formations', title:'Formations', drawerIcon:()=>(<RocketLaunchIcon color='#9ca3af'  size={24} />)}} component={FormationScreen} />
+                <Drawer.Navigator drawerContent={props =><CustomDrawer {...props}/>} 
+                initialRouteName="Home" 
+                screenOptions={{ drawerLabelStyle:{marginLeft:-25, fontSize:15}, 
+                drawerActiveBackgroundColor:'#e7e5e4', 
+                drawerActiveTintColor:'#404040',
+                drawerInactiveBackgroundColor:'#fff',
+                drawerInactiveTintColor:'#737373'}}>
+                    <Drawer.Screen name="Home" options={{drawerLabel: 'Accueil', title:'Accueil', drawerIcon:({color})=>(<HomeIcon color={color} size={24} />) }} 
+                    component={HomeScreen} />
+                    <Drawer.Screen name="Products" options={{drawerLabel: 'Products', title:'Products', drawerIcon:({color})=>(<ShoppingCartIcon color={color}  size={24} />)}} component={ProductScreen} />
+                    <Drawer.Screen name="Formations" options={{drawerLabel: 'Formations', title:'Formations', drawerIcon:({color})=>(<RocketLaunchIcon color={color}  size={24} />)}} component={FormationScreen} />
                     
                 </Drawer.Navigator>
                 

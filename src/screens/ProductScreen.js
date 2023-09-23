@@ -1,22 +1,17 @@
-import { View, Text, StyleSheet, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native'
 import React from 'react'
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function ProductScreen() {
     return (
+
         <View style={styles.container}>
 
-            <ImageBackground style={styles.imgBackground} source={require('../../assets/image/produits-bg.jpg')}>
-
-                <LinearGradient
-                    colors={["#333", 'transparent']}
-                    start={[1, 1]}
-                    end={[0,0]}
-                    style={styles.linearGradient}
-                >
-                    <Text style={styles.text} >Notre Boutique</Text>
-                </LinearGradient>
-            </ImageBackground>
+            <Image style={styles.imgTop} source={require('../../assets/image/produits-bg.jpg')} />
+            <View style={styles.produitsBox}>
+                <Text style={styles.produitsBoxText} >Notre Boutique</Text>
+                <Text style={styles.produitsList}>Récuperation, Reconditionnement & Vent Ordinateurs à Prix Solidaires</Text>
+            </View>
 
         </View>
     )
@@ -26,30 +21,30 @@ const styles = StyleSheet.create(
         container: {
             flex: 1,
             backgroundColor: "#fff",
-            alignItems: "center",
+
             justifyContent: 'space-between',
         },
-        imgBackground: {
+        imgTop: {
             flex: 0.4,
             width: "100%",
+            justifyContent: 'center',
             alignItems: "center",
         },
-
-        linearGradient: {
-            width: '100%',
-            height: '100%',
-            opacity: 0.7,
-            justifyContent: 'center',
-            alignItems: 'center'
+        produitsBox: {
+            flex: 0.6,
+            justifyContent: 'flex-start',
+            margin: 20,
         },
-        text: {
-            color: '#fff',
-            backgroundColor:'#000',
-            padding:5,
-            fontSize: 40,
-            opacity: 1,
+        produitsBoxText: {
+            fontSize: 24,
             fontWeight: 'bold',
-            textAlign: 'center'
+            color: '#404040',
+        },
+        produitsList: {
+            marginTop: 20,
+            fontSize: 18,
+            color: '#404040',
+            lineHeight:30
         }
     }
 )

@@ -20,11 +20,11 @@ const CustomDrawer = (props) => {
                 <Text style={{fontWeight:'700', fontSize:24, color:'white'}}>Web Solidarité</Text>
             </ImageBackground>
                 <DrawerItemList {...props} />
-                <DrawerItem labelStyle={{fontSize:15}} label={'Se déconnecter'} onPress={handleLogout} icon={()=>(<ArrowRightOnRectangleIcon marginRight={-24} color='#9ca3af'  size={24} />)} />
+                <DrawerItem labelStyle={{fontSize:15, color:'#737373'}} label={'Se déconnecter'} onPress={handleLogout} icon={()=>(<ArrowRightOnRectangleIcon marginRight={-24} color='#737373'  size={24} />)} />
             </DrawerContentScrollView>
             <View style={{ alignItems: 'flex-end', padding: 18 }}>
-            <TouchableOpacity onPress={()=>{Alert.alert('Author info','Created by Reshetnikov Ruslan')}}>
-                <Text style={{fontSize:12,color:'#d1d5db'}}>v.1.0.0</Text>
+            <TouchableOpacity onPress={()=>{Alert.alert('Web Solidarité App','Version 1.3.0\nCreated by Reshetnikov Ruslan')}}>
+                <Text style={{fontSize:12,color:'#d1d5db'}}>v.1.3.0</Text>
             </TouchableOpacity>
             </View>
         </View>
