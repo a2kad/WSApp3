@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView} from 'react-native'
 import React from 'react'
 import { signOut, updateProfile } from 'firebase/auth'
 import { auth } from '../config/firebase'
@@ -12,6 +12,32 @@ export default function HomeScreen({ navigation }) {
             <View style={styles.formationsHead}>
                 <Text style={styles.formationsHeadText} >
                     Nos formations
+                </Text>
+                <ScrollView>
+                    <Text style={styles.formationList}>
+                        Environnement Windows
+                    </Text>
+                    <Text style={styles.formationList}>
+                        Environnement Ubuntu
+                    </Text>
+                    <Text style={styles.formationList}>
+                        Messagerie
+                    </Text>
+                    <Text style={styles.formationList}>
+                        Internet & Sécurité Informatique
+                    </Text>
+                    <Text style={styles.formationList}>
+                        Logiciels & Applications
+                    </Text>
+                    <Text style={styles.formationList}>
+                        E-Administration
+                    </Text>
+                    <Text style={styles.formationList}>
+                        E-Sante
+                    </Text>
+                </ScrollView>
+                <Text>
+
                 </Text>
             </View>
             <View style={styles.productsHead}>
@@ -32,7 +58,7 @@ const styles = StyleSheet.create({
     },
     formationsHead: {
         flex:0.4,
-        flexDirection: 'row',
+        flexDirection: 'column',
         margin: 20
     },
     formationsHeadText: {
@@ -49,6 +75,9 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         color: '#404040',
+    },
+    formationList:{
+        marginTop:5
     }
 
 });
