@@ -73,4 +73,8 @@ npm i react-native-heroicons react-native-svg
 [Documentation ici](https://www.npmjs.com/package/react-native-heroicons)
 [HeroIcons.com/](https://heroicons.com/)
 
-## External links
+## Champ des numéros de téléphone
+```
+npm i react-native-phone-number-input
+```
+[Documentation ici](hhttps://www.npmjs.com/package/react-native-phone-number-input)

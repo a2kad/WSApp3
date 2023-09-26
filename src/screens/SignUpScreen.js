@@ -1,23 +1,36 @@
 import { View, Text, SafeAreaView, TouchableOpacity, TextInput } from 'react-native'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../config/firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import PhoneInput from "react-native-phone-number-input";
 
 const SignUpScreen = () => {
     const navigation = useNavigation();
+    const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [value, setValue] = useState("");
+    const [valid, setValid] = useState(false);
+    const phoneInput = useRef(null);
     const storeData = async () => {
+        
         try {
+            const checkValid = phoneInput.current?.isValidNumber(value);
+            console.log('value ',value);
+            setValid(checkValid ? checkValid : false);
+            console.log('Valid phone number: ',valid);
+            await AsyncStorage.setItem('phoneNumber', phoneNumber);
             await AsyncStorage.setItem('userEmail', email);
             await AsyncStorage.setItem('userPass', password);
-            console.log('email  : ',email);
-            console.log('pass  : ',password);
+            
+            console.log('phone  : ', phoneNumber);
+            console.log('email  : ', email);
+            console.log('pass  : ', password);
             navigation.navigate('Question1')
         } catch (e) {
-            console.log('Async error : ',e.message)
+            console.log('Async error : ', e.message)
         }
     };
 
@@ -41,6 +54,13 @@ const SignUpScreen = () => {
                 <View className='mx-4 '>
                     {/* <Text className='text-gray-700 my-2 p-2'>Numéro de téléphone</Text>
                 <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Téléphone'></TextInput> */}
+                    <PhoneInput
+                        ref={phoneInput}
+                        defaultValue={phoneNumber}
+                        defaultCode='FR'
+                        onChangeText={(text) => { setValue(text) }}
+                        onChangeFormattedText={(text) =>{ setPhoneNumber(text)}} />
+
                     <Text className='text-gray-700 my-2 p-2'>E-mail</Text>
                     <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' placeholder='E-mail'
                         value={email} onChangeText={value => setEmail(value)}></TextInput>
@@ -50,7 +70,9 @@ const SignUpScreen = () => {
                 </View>
                 <View className="space-y-4">
                     <TouchableOpacity
-                        onPress={storeData}
+                        onPress={storeData
+
+                        }
                         //onPress={()=>navigation.navigate('Question1')}
                         className="py-3 bg-yellow-400 mx-7 rounded-xl">
                         <Text

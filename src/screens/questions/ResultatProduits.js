@@ -1,15 +1,18 @@
 import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { auth } from '../../config/firebase';
+import { auth, usersDb } from '../../config/firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createUserWithEmailAndPassword, getAdditionalUserInfo, signInAnonymously, updateProfile } from 'firebase/auth';
+import { addDoc } from 'firebase/firestore';
+import useAuth from '../../hooks/useAuth';
 
 export default function ResultatFormation() {
     const count = useSelector(state => state.counter.value);
     const {user} = useAuth();
     const getData = async () => {
         try {
+            const phone = await AsyncStorage.getItem('phoneNumber');
             const email = await AsyncStorage.getItem('userEmail');
             const password = await AsyncStorage.getItem('userPass');
             console.log('Login : ',email)
@@ -18,6 +21,7 @@ export default function ResultatFormation() {
             let result = await signInAnonymously(auth);
             
             await addDoc(usersDb,{
+                phone: phone,
                 email: email,
                 count: count,
                 userId: result._tokenResponse.localId,

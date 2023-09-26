@@ -14,6 +14,7 @@ export default function ResultatFormation() {
 
     const getData = async () => {
         try {
+            const phone = await AsyncStorage.getItem('phoneNumber');
             const email = await AsyncStorage.getItem('userEmail');
             const password = await AsyncStorage.getItem('userPass');
             console.log('Login : ',email)
@@ -22,6 +23,7 @@ export default function ResultatFormation() {
             let result = await signInAnonymously(auth);
             console.log('Result anonimous registration: ',result)
             await addDoc(usersDb,{
+                phone: phone,
                 email: email,
                 count: count,
                 userId: result._tokenResponse.localId,

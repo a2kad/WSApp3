@@ -11,17 +11,17 @@ const {user} = useAuth();
         <SafeAreaProvider style={styles.container}>
             <View style={styles.formationsHead}>
                 <Text style={styles.formationsHeadText} >
-                    Nos formations {JSON.stringify(user.uid)} 
+                    {/* Nos formations {JSON.stringify(user.uid)}  */}
                 </Text>
                 <ScrollView>
                     <Text style={styles.formationList}>
-                        Environnement Windows{ JSON.stringify(user.stsTokenManager)}
+                        Environnement Windows
                     </Text>
                     <Text style={styles.formationList}>
                         Environnement Ubuntu
                     </Text>
                     <Text style={styles.formationList}>
-                        Messagerie
+                        Messagerier
                     </Text>
                     <Text style={styles.formationList}>
                         Internet & Sécurité Informatique
