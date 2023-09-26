@@ -6,16 +6,16 @@ import useAuth from '../hooks/useAuth'
 import { SafeAreaProvider} from 'react-native-safe-area-context'
 
 export default function HomeScreen({ navigation }) {
-
+const {user} = useAuth();
     return (
         <SafeAreaProvider style={styles.container}>
             <View style={styles.formationsHead}>
                 <Text style={styles.formationsHeadText} >
-                    Nos formations
+                    Nos formations {JSON.stringify(user.uid)} 
                 </Text>
                 <ScrollView>
                     <Text style={styles.formationList}>
-                        Environnement Windows
+                        Environnement Windows{ JSON.stringify(user.stsTokenManager)}
                     </Text>
                     <Text style={styles.formationList}>
                         Environnement Ubuntu

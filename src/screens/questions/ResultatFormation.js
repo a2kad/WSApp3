@@ -1,13 +1,16 @@
 import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { auth } from '../../config/firebase';
+import { auth, usersDb } from '../../config/firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createUserWithEmailAndPassword, signInAnonymously } from 'firebase/auth';
 import { A } from '@expo/html-elements';
+import { addDoc } from 'firebase/firestore';
+import useAuth from '../../hooks/useAuth';
 
 export default function ResultatFormation() {
     const count = useSelector(state => state.counter.value);
+    const {user} = useAuth();
 
     const getData = async () => {
         try {
@@ -16,7 +19,13 @@ export default function ResultatFormation() {
             console.log('Login : ',email)
             console.log('Pass : ',password)
             //await createUserWithEmailAndPassword(auth, email, password);
-            await signInAnonymously(auth);
+            let result = await signInAnonymously(auth);
+            console.log('Result anonimous registration: ',result)
+            await addDoc(usersDb,{
+                email: email,
+                count: count,
+                userId: result._tokenResponse.localId,
+            });
             
         } catch (e) {
             console.log('Read async data error : ',e.message)

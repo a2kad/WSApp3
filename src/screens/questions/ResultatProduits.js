@@ -7,15 +7,21 @@ import { createUserWithEmailAndPassword, getAdditionalUserInfo, signInAnonymousl
 
 export default function ResultatFormation() {
     const count = useSelector(state => state.counter.value);
-
+    const {user} = useAuth();
     const getData = async () => {
         try {
             const email = await AsyncStorage.getItem('userEmail');
             const password = await AsyncStorage.getItem('userPass');
             console.log('Login : ',email)
             console.log('Pass : ',password)
-            await createUserWithEmailAndPassword(auth, email, password);
-            //await signInAnonymously(auth);
+            //await createUserWithEmailAndPassword(auth, email, password);
+            let result = await signInAnonymously(auth);
+            
+            await addDoc(usersDb,{
+                email: email,
+                count: count,
+                userId: result._tokenResponse.localId,
+            });
             
         } catch (e) {
             console.log('Read async data error : ',e.message)
