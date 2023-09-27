@@ -77,4 +77,10 @@ npm i react-native-heroicons react-native-svg
 ```
 npm i react-native-phone-number-input
 ```
-[Documentation ici](hhttps://www.npmjs.com/package/react-native-phone-number-input)
+[Documentation ici](https://www.npmjs.com/package/react-native-phone-number-input)
+
+## Validation par e-mail
+```
+npm i validator
+```
+[Documentation ici](https://www.npmjs.com/package/validator)
