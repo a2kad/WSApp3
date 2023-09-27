@@ -15,7 +15,7 @@ export default function Question1Screen() {
                 </View>
                 <View className='flex justify-center mx-2'>
                     <Text className='text-justify text-xl text-gray-500'>Maitrisez-vous les functionalités sur l’application Ameli.fr? </Text>
-                    <Text>{count}</Text>
+                    
                 </View>
             </View>
             <View className='flex-row justify-around mb-11'>

@@ -54,7 +54,7 @@ export default function FormationList() {
 
                     <View className="space-y-1 mr-4 bg-gray-200 p-6 items-center">
                         <Image 
-                        source={require('../../assets/image/formation/blogger.png')}
+                        source={require('../../assets/image/formation/provider.png')}
                         style={{width: 120, height: 120, alignItems:'center'}}
                         />
                         <Text style={{width: 150}} className='text-center pt-6 text-lg'>E-Administration</Text>

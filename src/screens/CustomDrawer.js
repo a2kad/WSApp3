@@ -16,7 +16,7 @@ const CustomDrawer = (props) => {
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props} >
-            <View style={{padding:20, marginTop:-10, alignItems:'flex-end'}} >
+            <View style={{padding:20, marginTop:-10, alignItems:'center'}} >
                 <Text style={{fontWeight:'700', fontSize:24}}>
                 <Text style={{ color:'#FFDE59'}}>W</Text>
                 <Text style={{ color:'#5CE1E6'}}>e</Text>

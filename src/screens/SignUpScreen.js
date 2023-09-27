@@ -6,6 +6,7 @@ import { auth } from '../config/firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import PhoneInput from "react-native-phone-number-input";
 import validator from 'validator';
+import Snackbar from 'react-native-snackbar';
 
 const SignUpScreen = () => {
     const navigation = useNavigation();
@@ -33,6 +34,15 @@ const SignUpScreen = () => {
         }
         else {
             console.log("Telephone or email isn't valid")
+            Snackbar.show({
+                text: 'Hello world',
+                duration: Snackbar.LENGTH_SHORT,
+                action: {
+                text: 'UNDO',
+                textColor: 'green',
+                  onPress: () => { /* Do something. */ },
+                },
+            });
         }
     };
 
@@ -43,6 +53,7 @@ const SignUpScreen = () => {
                 navigation.navigate('SignUpName')
             } catch (err) {
                 console.log('Got error', err.message);
+                
             }
         }
     }

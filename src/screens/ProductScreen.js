@@ -11,7 +11,7 @@ export default function ProductScreen() {
             <Image style={styles.imgTop} source={require('../../assets/image/produits-bg.jpg')} />
             <View style={styles.produitsBox}>
                 <Text style={styles.produitsBoxText} >Notre Boutique</Text>
-                <Text style={styles.produitsList}>Récuperation, Reconditionnement & Vent Ordinateurs à Prix Solidaires</Text>
+                <Text style={styles.produitsList}>Récuperation, Reconditionnement & Vente d'Ordinateurs à Prix Solidaires</Text>
                 <ProductList />
             </View>
             
