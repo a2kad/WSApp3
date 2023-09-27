@@ -1,50 +1,55 @@
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView} from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import { signOut, updateProfile } from 'firebase/auth'
 import { auth } from '../config/firebase'
 import useAuth from '../hooks/useAuth'
-import { SafeAreaProvider} from 'react-native-safe-area-context'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import FormationList from './FormationList'
 
 export default function HomeScreen({ navigation }) {
-const {user} = useAuth();
+    const { user } = useAuth();
     return (
         <SafeAreaProvider style={styles.container}>
-            <View style={styles.formationsHead}>
-                <Text style={styles.formationsHeadText} >
-                    Nos formations   
-                </Text>
-                <ScrollView>
-                    <Text style={styles.formationList}>
-                        Environnement Windows
+            <ScrollView>
+                <View style={styles.formationsHead}>
+                    <Text style={styles.formationsHeadText} >
+                        Nos formations
                     </Text>
-                    <Text style={styles.formationList}>
-                        Environnement Ubuntu
-                    </Text>
-                    <Text style={styles.formationList}>
-                        Messagerier
-                    </Text>
-                    <Text style={styles.formationList}>
-                        Internet & Sécurité Informatique
-                    </Text>
-                    <Text style={styles.formationList}>
-                        Logiciels & Applications
-                    </Text>
-                    <Text style={styles.formationList}>
-                        E-Administration
-                    </Text>
-                    <Text style={styles.formationList}>
-                        E-Sante
-                    </Text>
-                </ScrollView>
-                <Text>
 
-                </Text>
-            </View>
-            <View style={styles.productsHead}>
-                <Text style={styles.productsHeadText} >
-                    Nos products
-                </Text>
-            </View>
+                    <FormationList />
+
+                    {/* <View style={styles.formationListBox}>
+                        <Text style={styles.formationList}>
+                            Environnement Windows
+                        </Text>
+                        <Text style={styles.formationList}>
+                            Environnement Ubuntu
+                        </Text>
+                        <Text style={styles.formationList}>
+                            Messagerier
+                        </Text>
+                        <Text style={styles.formationList}>
+                            Internet & Sécurité Informatique
+                        </Text>
+                        <Text style={styles.formationList}>
+                            Logiciels & Applications
+                        </Text>
+                        <Text style={styles.formationList}>
+                            E-Administration
+                        </Text>
+                        <Text style={styles.formationList}>
+                            E-Sante
+                        </Text>
+                    </View> */}
+                    <Text>
+                    </Text>
+                </View>
+                <View style={styles.productsHead}>
+                    <Text style={styles.productsHeadText} >
+                        Nos products
+                    </Text>
+                </View>
+            </ScrollView>
         </SafeAreaProvider>
 
     )
@@ -53,11 +58,10 @@ const {user} = useAuth();
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent:'flex-start',
-        
+        justifyContent: 'flex-start',
     },
     formationsHead: {
-        flex:0.4,
+        //flex: 0.4,
         flexDirection: 'column',
         margin: 20
     },
@@ -67,7 +71,7 @@ const styles = StyleSheet.create({
         color: '#404040',
     },
     productsHead: {
-        flex:0.6,
+        //flex: 0.6,
         flexDirection: 'row',
         margin: 20
     },
@@ -76,8 +80,16 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#404040',
     },
-    formationList:{
-        marginTop:5
+    formationList: {
+        marginTop: 10
+    },
+    formationListBox: {
+        marginTop: 20,
+        paddingHorizontal:30,
+        paddingBottom:20,
+        paddingTop:5,
+        backgroundColor:'#e5e7eb',
+        borderRadius:14
     }
 
 });

@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native'
 import React from 'react'
 import { LinearGradient } from "expo-linear-gradient";
+import FormationList from './FormationList';
 
 
 export default function FormationScreen() {
@@ -10,7 +11,10 @@ export default function FormationScreen() {
             <Image style={styles.imgTop} source={require('../../assets/image/formation-bg.jpg')} />
             <View style={styles.formationBox}>
                 <Text style={styles.formationBoxText} >Nos Ateliers Numériques</Text>
-                <ScrollView>
+                
+                    <FormationList />
+                
+                {/* <ScrollView>
                     <Text style={styles.formationList}>
                         Environnement Windows
                     </Text>
@@ -32,7 +36,7 @@ export default function FormationScreen() {
                     <Text style={styles.formationList}>
                         E-Sante
                     </Text>
-                </ScrollView>
+                </ScrollView> */}
             </View>
 
         </View>
@@ -54,7 +58,7 @@ const styles = StyleSheet.create(
         },
         formationBox: {
             flex: 0.6,
-            justifyContent: 'flex-start',
+            justifyContent: 'space-around',
             margin: 20,
         },
         formationBoxText: {
