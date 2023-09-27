@@ -41,8 +41,8 @@ export default function ResultatFormation() {
                 </View>
                 <View className='flex justify-center mx-5'>
                     <Text className='text-justify text-xl text-gray-500'>Il serait préférable de vous inscrire à nos ateliers numériques.</Text>
-                    <Text className='text-justify text-xl text-gray-500 my-2'>Notre Site Web :</Text>
-                    <A style={{fontSize:20, color:'#0ea5e9', textDecorationLine:'underline'}} href='https://www.asso-websolidarite.org/'>www.asso-websolidarite.org</A>
+                    {/* <Text className='text-justify text-xl text-gray-500 my-2'>Notre Site Web :</Text>
+                    <A style={{fontSize:20, color:'#0ea5e9', textDecorationLine:'underline'}} href='https://www.asso-websolidarite.org/'>www.asso-websolidarite.org</A> */}
                 </View>
                 <View className="space-y-4">
                     <TouchableOpacity

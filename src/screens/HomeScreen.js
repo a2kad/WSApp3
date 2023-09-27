@@ -11,7 +11,7 @@ const {user} = useAuth();
         <SafeAreaProvider style={styles.container}>
             <View style={styles.formationsHead}>
                 <Text style={styles.formationsHeadText} >
-                    {/* Nos formations {JSON.stringify(user.uid)}  */}
+                    Nos formations   
                 </Text>
                 <ScrollView>
                     <Text style={styles.formationList}>

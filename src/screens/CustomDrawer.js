@@ -16,9 +16,22 @@ const CustomDrawer = (props) => {
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props} >
-            <ImageBackground source={require('../../assets/image/bg-drawer3.jpg')} style={{padding:20, marginTop:-10, alignItems:'flex-end'}} >
-                <Text style={{fontWeight:'700', fontSize:24, color:'white'}}>Web Solidarité</Text>
-            </ImageBackground>
+            <View style={{padding:20, marginTop:-10, alignItems:'flex-end'}} >
+                <Text style={{fontWeight:'700', fontSize:24}}>
+                <Text style={{ color:'#FFDE59'}}>W</Text>
+                <Text style={{ color:'#5CE1E6'}}>e</Text>
+                <Text style={{ color:'#FF5757'}}>b</Text>
+                <Text style={{ color:'#FF914D'}}> S</Text>
+                <Text style={{ color:'#7ED957'}}>o</Text>
+                <Text style={{ color:'#5CE1E6'}}>l</Text>
+                <Text style={{ color:'#FF5757'}}>i</Text>
+                <Text style={{ color:'#FFDE59'}}>d</Text>
+                <Text style={{ color:'#FF914D'}}>a</Text>
+                <Text style={{ color:'#7ED957'}}>r</Text>
+                <Text style={{ color:'#5CE1E6'}}>i</Text>
+                <Text style={{ color:'#FF5757'}}>t</Text>
+                <Text style={{ color:'#FFDE59'}}>é</Text></Text>
+            </View>
                 <DrawerItemList {...props} />
                 <DrawerItem labelStyle={{fontSize:15, color:'#737373'}} label={'Se déconnecter'} onPress={handleLogout} icon={()=>(<ArrowRightOnRectangleIcon marginRight={-24} color='#737373'  size={24} />)} />
             </DrawerContentScrollView>
