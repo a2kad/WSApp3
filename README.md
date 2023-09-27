@@ -84,3 +84,10 @@ npm i react-native-phone-number-input
 npm i validator
 ```
 [Documentation ici](https://www.npmjs.com/package/validator)
+
+## Toast message
+
+```
+npm i react-native-toast-message
+```
+[Documentation ici](https://www.npmjs.com/package/react-native-toast-message)
