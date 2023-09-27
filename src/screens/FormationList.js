@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, TouchableHighlight, Image, Dimensions } from 'react-native'
+import { View, Text, ScrollView, Image, Dimensions } from 'react-native'
 import React from 'react'
 
 var {width, height} = Dimensions.get('window')

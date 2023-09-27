@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native'
 import React from 'react'
-import { LinearGradient } from "expo-linear-gradient";
+
+import ProductList from './ProductList';
 
 export default function ProductScreen() {
     return (
@@ -11,7 +12,9 @@ export default function ProductScreen() {
             <View style={styles.produitsBox}>
                 <Text style={styles.produitsBoxText} >Notre Boutique</Text>
                 <Text style={styles.produitsList}>Récuperation, Reconditionnement & Vent Ordinateurs à Prix Solidaires</Text>
+                <ProductList />
             </View>
+            
 
         </View>
     )

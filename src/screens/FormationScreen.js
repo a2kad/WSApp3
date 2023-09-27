@@ -14,29 +14,7 @@ export default function FormationScreen() {
                 
                     <FormationList />
                 
-                {/* <ScrollView>
-                    <Text style={styles.formationList}>
-                        Environnement Windows
-                    </Text>
-                    <Text style={styles.formationList}>
-                        Environnement Ubuntu
-                    </Text>
-                    <Text style={styles.formationList}>
-                        Messagerie
-                    </Text>
-                    <Text style={styles.formationList}>
-                        Internet & Sécurité Informatique
-                    </Text>
-                    <Text style={styles.formationList}>
-                        Logiciels & Applications
-                    </Text>
-                    <Text style={styles.formationList}>
-                        E-Administration
-                    </Text>
-                    <Text style={styles.formationList}>
-                        E-Sante
-                    </Text>
-                </ScrollView> */}
+                
             </View>
 
         </View>
