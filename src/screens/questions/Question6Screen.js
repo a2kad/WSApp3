@@ -3,13 +3,13 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { Counter } from '../../features/counter/Counter';
 
-export default function Question1Screen() {
+export default function Question6Screen() {
     const navigation = useNavigation();
     return (
         <SafeAreaView className='flex-1'>
             <View className='flex-1 justify-top items-center m-6'>
                 <View className='py-6'>
-                    <Text className='font-bold text-4xl leading-10 text-gray-700 text-center py-4'>Question 6/10</Text>
+                    <Text className='font-bold text-4xl leading-10 text-gray-700 text-center py-4'>Question 6/11</Text>
                 </View>
                 <View className='flex justify-center mx-2'>
                     <Text className='text-justify text-xl text-gray-500'>Connaissez-vous la procédure pour effacer l'historique de votre navigation sur internet ?</Text>

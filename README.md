@@ -91,3 +91,9 @@ npm i validator
 npm i react-native-toast-message
 ```
 [Documentation ici](https://www.npmjs.com/package/react-native-toast-message)
+
+## CheckBox
+```
+npx expo install expo-checkbox
+```
+[Documentation ici](https://docs.expo.dev/versions/latest/sdk/checkbox/)

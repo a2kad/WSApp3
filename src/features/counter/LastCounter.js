@@ -1,15 +1,21 @@
-import React, { useState }  from 'react'
+import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment } from './counterSlice'
 import { View, Text, TouchableOpacity } from 'react-native'
-
+import Checkbox from 'expo-checkbox';
 import { useNavigation } from '@react-navigation/native';
 
 export const LastCounter = () => {
     const navigation = useNavigation();
     const count = useSelector(state => state.counter.value)
     const dispatch = useDispatch()
-    const [buttonDis, setButtonDis ] = useState(false)
+    const [buttonDis, setButtonDis] = useState(false)
+    const [isChecked1, setChecked1] = useState(false);
+    const [isChecked2, setChecked2] = useState(false);
+    const [isChecked3, setChecked3] = useState(false);
+    const [isChecked4, setChecked4] = useState(false);
+    const [isChecked5, setChecked5] = useState(false);
+    const [isChecked6, setChecked6] = useState(false);
 
 
     const addPoint = () => {
@@ -24,6 +30,8 @@ export const LastCounter = () => {
         }
     }
 
+    
+
     const zeroPoint = () => {
         //dispatch(increment());
         if (count <= 5) {
@@ -36,6 +44,8 @@ export const LastCounter = () => {
     }
 
     return (
+        
+
         <View 
         style={{flexDirection:'row', justifyContent:'space-around', marginBottom:44}}
         className='flex-row justify-around mb-11'>
@@ -60,5 +70,6 @@ export const LastCounter = () => {
         </Text>
     </TouchableOpacity>
     </View>
+    
     );
 }
