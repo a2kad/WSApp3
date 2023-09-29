@@ -27,8 +27,9 @@ import ResultatFormation from '../screens/questions/ResultatFormation';
 import ResultatProduits from '../screens/questions/ResultatProduits';
 import { HomeIcon } from "react-native-heroicons/mini";
 import { ShoppingCartIcon } from "react-native-heroicons/mini";
-import { RocketLaunchIcon } from "react-native-heroicons/mini";
+import { RocketLaunchIcon, ChatBubbleLeftRightIcon } from "react-native-heroicons/mini";
 import CustomDrawer from '../screens/CustomDrawer';
+import ContactScreen from '../screens/ContactScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -50,7 +51,7 @@ export default function AppNavigation() {
                     component={HomeScreen} />
                     <Drawer.Screen name="Products" options={{drawerLabel: 'Products', title:'Products', drawerIcon:({color})=>(<ShoppingCartIcon color={color}  size={24} />)}} component={ProductScreen} />
                     <Drawer.Screen name="Formations" options={{drawerLabel: 'Formations', title:'Formations', drawerIcon:({color})=>(<RocketLaunchIcon color={color}  size={24} />)}} component={FormationScreen} />
-                    
+                    <Drawer.Screen name="Contacts" options={{drawerLabel: 'Contacts', title:'Contacts', drawerIcon:({color})=>(<ChatBubbleLeftRightIcon color={color}  size={24} />)}} component={ContactScreen} />
                 </Drawer.Navigator>
                 
             
