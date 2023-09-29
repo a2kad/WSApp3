@@ -97,3 +97,15 @@ npm i react-native-toast-message
 npx expo install expo-checkbox
 ```
 [Documentation ici](https://docs.expo.dev/versions/latest/sdk/checkbox/)
+
+## Map
+```
+npm i react-native-maps
+```
+[Documentation ici](https://www.npmjs.com/package/react-native-maps)
+
+## MailTo link
+```
+npm i react-native-email
+```
+[Documentation ici](https://github.com/tiaanduplessis/react-native-email)
