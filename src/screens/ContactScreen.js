@@ -38,8 +38,8 @@ export default function ContactScreen() {
             <Text style={styles.contactText}>Association Web Solidarité</Text>
             <Text style={styles.contactText}>48-50 Rue Albert Samain, 76620, Le Havre</Text>
             <TouchableOpacity onPress={handleEmail}><Text style={styles.contactText}>Email : <Text className='text-cyan-600'>contact@asso-websolidarite.org</Text></Text></TouchableOpacity>
-            <Text style={styles.contactText} onPress={()=>{Linking.openURL('tel:0102030405');}}>Tél. : 01.02.03.04.05</Text>
-            <Text><Text style={styles.contactLink} onPress={()=>{Linking.openURL('https://www.asso-websolidarite.org');}}>www.asso-websolidarite.org</Text></Text>
+            <Text style={styles.contactText} onPress={()=>{Linking.openURL('tel:0954149048');}}>Tél. : 09 54 14 90 48</Text>
+            <Text style={styles.contactText}>Site web : <Text style={styles.contactLink} onPress={()=>{Linking.openURL('https://www.asso-websolidarite.org');}}>www.asso-websolidarite.org</Text></Text>
         </View>
     );
 }
