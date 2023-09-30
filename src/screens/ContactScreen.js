@@ -35,9 +35,11 @@ export default function ContactScreen() {
 
             </MapView>
             <Text style={styles.contactHead}>Nos Contacts</Text>
+            <Text style={styles.contactText}>Association Web Solidarité</Text>
             <Text style={styles.contactText}>48-50 Rue Albert Samain, 76620, Le Havre</Text>
             <TouchableOpacity onPress={handleEmail}><Text style={styles.contactText}>Email : <Text className='text-cyan-600'>contact@asso-websolidarite.org</Text></Text></TouchableOpacity>
             <Text style={styles.contactText} onPress={()=>{Linking.openURL('tel:0102030405');}}>Tél. : 01.02.03.04.05</Text>
+            <Text><Text style={styles.contactLink} onPress={()=>{Linking.openURL('https://www.asso-websolidarite.org');}}>www.asso-websolidarite.org</Text></Text>
         </View>
     );
 }
@@ -56,6 +58,12 @@ const styles = StyleSheet.create({
     },
     contactText: {
         color: '#6b7280',
+        fontSize: 18,
+        paddingHorizontal: 20,
+        paddingTop:10
+    },
+    contactLink: {
+        color: '#0891b2',
         fontSize: 18,
         paddingHorizontal: 20,
         paddingTop:10

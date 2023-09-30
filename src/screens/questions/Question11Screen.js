@@ -21,6 +21,7 @@ export default function Question11Screen() {
     const [isChecked4, setChecked4] = useState(false);
     const [isChecked5, setChecked5] = useState(false);
     const [isChecked6, setChecked6] = useState(false);
+    const [isChecked7, setChecked7] = useState(false);
 
     const checkResult = () => {
         setButtonDis(true);
@@ -118,6 +119,16 @@ export default function Question11Screen() {
                             color={isChecked6 ? '#374151' : undefined}
                         />
                         <Text className='text-justify text-xl text-gray-500 my-3.5'>SeaMonkey</Text>
+                    </View>
+
+                    <View className='flex-row'>
+                        <Checkbox
+                            style={{ margin: 20 }}
+                            value={isChecked7}
+                            onValueChange={setChecked7}
+                            color={isChecked7 ? '#374151' : undefined}
+                        />
+                        <Text className='text-justify text-xl text-gray-500 my-3.5'>Sidekick</Text>
                     </View>
 
                 </View>
