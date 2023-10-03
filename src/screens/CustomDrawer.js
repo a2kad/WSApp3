@@ -16,21 +16,21 @@ const CustomDrawer = (props) => {
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props} >
-            <View style={{padding:20, marginTop:-10, alignItems:'center', backgroundColor:'#1f2937'}} >
+            <View style={{padding:20, marginTop:-10, alignItems:'center', backgroundColor:'#333'}} >
                 <Text style={{fontWeight:'700', fontSize:24}}>
-                <Text style={{ color:'#FFDE59'}}>W</Text>
-                <Text style={{ color:'#5CE1E6'}}>e</Text>
-                <Text style={{ color:'#FF5757'}}>b</Text>
-                <Text style={{ color:'#FF914D'}}> S</Text>
-                <Text style={{ color:'#7ED957'}}>o</Text>
-                <Text style={{ color:'#5CE1E6'}}>l</Text>
-                <Text style={{ color:'#FF5757'}}>i</Text>
-                <Text style={{ color:'#FFDE59'}}>d</Text>
-                <Text style={{ color:'#FF914D'}}>a</Text>
-                <Text style={{ color:'#7ED957'}}>r</Text>
-                <Text style={{ color:'#5CE1E6'}}>i</Text>
-                <Text style={{ color:'#FF5757'}}>t</Text>
-                <Text style={{ color:'#FFDE59'}}>é</Text></Text>
+                <Text style={{ color:'#fbbf24'}}>W</Text>
+                <Text style={{ color:'#2dd4bf'}}>e</Text>
+                <Text style={{ color:'#f87171'}}>b</Text>
+                <Text style={{ color:'#fb923c'}}> S</Text>
+                <Text style={{ color:'#a3e635'}}>o</Text>
+                <Text style={{ color:'#2dd4bf'}}>l</Text>
+                <Text style={{ color:'#f87171'}}>i</Text>
+                <Text style={{ color:'#fbbf24'}}>d</Text>
+                <Text style={{ color:'#fb923c'}}>a</Text>
+                <Text style={{ color:'#a3e635'}}>r</Text>
+                <Text style={{ color:'#2dd4bf'}}>i</Text>
+                <Text style={{ color:'#f87171'}}>t</Text>
+                <Text style={{ color:'#fbbf24'}}>é</Text></Text>
             </View>
                 <DrawerItemList {...props} />
                 <DrawerItem labelStyle={{fontSize:15, color:'#737373'}} label={'Se déconnecter'} onPress={handleLogout} icon={()=>(<ArrowRightOnRectangleIcon marginRight={-24} color='#737373'  size={24} />)} />
