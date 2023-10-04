@@ -21,7 +21,7 @@ const SignUpScreen = () => {
         console.log('value ', value);
         setValid(checkValid ? checkValid : false);
         console.log('Valid phone number: ', valid);
-        //if (checkValid === true && validator.isEmail(email)) {
+        if (checkValid === true && validator.isEmail(email)) {
             try {
                 await AsyncStorage.setItem('phoneNumber', phoneNumber);
                 await AsyncStorage.setItem('userEmail', email);
@@ -31,17 +31,17 @@ const SignUpScreen = () => {
             } catch (e) {
                 console.log('Async error : ', e.message)
             }
-        // }
-        // else {
-        //     console.log("Telephone or email isn't valid")
-        //     Toast.show({
-        //         type: 'error',
-        //         text1: 'Error',
-        //         text2: "Le téléphone ou l'e-mail n'est pas valide",
-        //         position: 'bottom',
-        // });
+        }
+        else {
+            console.log("Telephone or email isn't valid")
+            Toast.show({
+                type: 'error',
+                text1: 'Error',
+                text2: "Le téléphone ou l'e-mail n'est pas valide",
+                position: 'bottom',
+        });
         
-        // }
+        }
     };
 
     const handleSubmit = async () => {
