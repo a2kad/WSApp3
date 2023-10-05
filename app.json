@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "WSApp3",
+    "name": "Web Solidarité",
     "slug": "WSApp3",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.a2kad.WSApp3"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f88c1626-fe60-4fbf-bf6c-1191e53f1776"
+      }
     }
   }
 }

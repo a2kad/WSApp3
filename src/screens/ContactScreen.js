@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, Linking } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Linking, Image } from 'react-native'
 import React from 'react'
 import MapView from 'react-native-maps';
 import { Marker } from 'react-native-maps';
@@ -18,22 +18,9 @@ export default function ContactScreen() {
     return (
         <View className='flex-1 justify-top items-start'>
 
-            <MapView style={styles.map}
-                initialRegion={{
-                    latitude: 49.517414080278854,
-                    longitude: 0.08941804407015513,
-                    latitudeDelta: 0.0307,
-                    longitudeDelta: 0.0140,
-                }}
-            >
-                <Marker
-                    coordinate={{ latitude: 49.517414080278854, longitude: 0.08941804407015513 }}
-                    title='Association Web Solidarité'
-                    description='48-50 Rue Albert Samain, 76620, Le Havre'
-
-                ></Marker>
-
-            </MapView>
+            <Image style={styles.map} source={require('../../assets/image/map.png')}
+            />
+            
             <Text style={styles.contactHead}>Nos Contacts</Text>
             <Text style={styles.contactText}>Association Web Solidarité</Text>
             <Text style={styles.contactText}>48-50 Rue Albert Samain, 76620, Le Havre</Text>
