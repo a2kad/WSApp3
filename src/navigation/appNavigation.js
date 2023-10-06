@@ -30,13 +30,19 @@ import { ShoppingCartIcon } from "react-native-heroicons/mini";
 import { RocketLaunchIcon, ChatBubbleLeftRightIcon } from "react-native-heroicons/mini";
 import CustomDrawer from '../screens/CustomDrawer';
 import ContactScreen from '../screens/ContactScreen';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../config/firebase';
 
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
 export default function AppNavigation() {
+        
     const { user } = useAuth();
+    //const user = auth.currentUser;
+
+    
     if (user) {
         return (
             <NavigationContainer>
