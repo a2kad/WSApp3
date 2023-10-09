@@ -32,6 +32,7 @@ import CustomDrawer from '../screens/CustomDrawer';
 import ContactScreen from '../screens/ContactScreen';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../config/firebase';
+import { ActivityIndicator, View } from 'react-native';
 
 
 const Stack = createNativeStackNavigator();
@@ -39,11 +40,16 @@ const Drawer = createDrawerNavigator();
 
 export default function AppNavigation() {
         
-    const { user } = useAuth();
+    const { user,loading } = useAuth();
     //const user = auth.currentUser;
 
-    
+    if (loading){
+        return(<View className="flex-1 justify-center items-center">
+        <ActivityIndicator size='large' />
+        </View>)
+    }else{
     if (user) {
+
         return (
             <NavigationContainer>
                 <Drawer.Navigator drawerContent={props =><CustomDrawer {...props}/>} 
@@ -90,5 +96,5 @@ export default function AppNavigation() {
             </NavigationContainer>
         )
     }
-
+}
 }
