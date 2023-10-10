@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, SafeAreaView, TouchableOpacity, TextInput, StyleSheet, PixelRatio } from 'react-native'
 import React, { useRef, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { createUserWithEmailAndPassword } from 'firebase/auth';
@@ -7,6 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import PhoneInput from "react-native-phone-number-input";
 import validator from 'validator';
 import Toast from 'react-native-toast-message';
+import { normalizeCssSelector } from 'nativewind/dist/utils/selector';
 
 const SignUpScreen = () => {
     const navigation = useNavigation();
@@ -58,7 +59,7 @@ const SignUpScreen = () => {
     return (
         <SafeAreaView className='flex-1'>
             <View className='flex-1 flex justify-around m-4' >
-                <Text className='font-bold text-4xl leading-10 text-gray-700 text-center my-2'>Bienvenue sur{"\n"}Web Solidarité App</Text>
+                <Text style={styles.head} className='font-bold  leading-10 text-gray-700 text-center my-2'>Bienvenue sur{"\n"}Web Solidarité App</Text>
                 <View className='flex justify-center mx-4'>
                     <Text className='text-2xl text-gray-500'>Renseigner votre numéro de téléphone et e-mail pour continuer</Text>
                 </View>
@@ -105,4 +106,9 @@ const SignUpScreen = () => {
     )
 }
 
+const styles= StyleSheet.create({
+    head:{
+        fontSize: (42)
+    }
+})
 export default SignUpScreen

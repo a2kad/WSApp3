@@ -15,7 +15,7 @@ export default function ProductList() {
                         source={require('../../assets/image/products/gaming.png')}
                         style={{width: 120, height: 120, alignItems:'center'}}
                         />
-                        <Text  style={{width: 150}}  className='text-center pt-6 text-lg'>Ordinateurs ++++++++ Reconditionnés</Text>
+                        <Text  style={{width: 150}}  className='text-center pt-6 text-lg'>Ordinateurs Reconditionnés</Text>
                     </View>
                     
                     <View className="space-y-1 mr-4 bg-gray-200 p-6 items-center">
