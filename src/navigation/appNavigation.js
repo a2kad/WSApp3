@@ -33,68 +33,73 @@ import ContactScreen from '../screens/ContactScreen';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../config/firebase';
 import { ActivityIndicator, View } from 'react-native';
+import CommandeScreen from '../screens/CommandeScreen';
 
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
+const RootStack = createNativeStackNavigator();
 
 export default function AppNavigation() {
-        
-    const { user,loading } = useAuth();
+
+    const { user, loading } = useAuth();
     //const user = auth.currentUser;
 
-    if (loading){
-        return(<View className="flex-1 justify-center items-center">
-        <ActivityIndicator size='large' />
+    if (loading) {
+        return (<View className="flex-1 justify-center items-center">
+            <ActivityIndicator size='large' />
         </View>)
-    }else{
-    if (user) {
-
-        return (
-            <NavigationContainer>
-                <Drawer.Navigator drawerContent={props =><CustomDrawer {...props}/>} 
-                initialRouteName="Home" 
-                screenOptions={{ drawerLabelStyle:{marginLeft:-25, fontSize:15}, 
-                drawerActiveBackgroundColor:'#e7e5e4', 
-                drawerActiveTintColor:'#404040',
-                drawerInactiveBackgroundColor:'#fff',
-                drawerInactiveTintColor:'#737373'}}>
-                    <Drawer.Screen name="Home" options={{drawerLabel: 'Accueil', title:'Accueil', drawerIcon:({color})=>(<HomeIcon color={color} size={24} />) }} 
-                    component={HomeScreen} />
-                    <Drawer.Screen name="Products" options={{drawerLabel: 'Products', title:'Products', drawerIcon:({color})=>(<ShoppingCartIcon color={color}  size={24} />)}} component={ProductScreen} />
-                    <Drawer.Screen name="Formations" options={{drawerLabel: 'Formations', title:'Formations', drawerIcon:({color})=>(<RocketLaunchIcon color={color}  size={24} />)}} component={FormationScreen} />
-                    <Drawer.Screen name="Contacts" options={{drawerLabel: 'Contacts', title:'Contacts', drawerIcon:({color})=>(<ChatBubbleLeftRightIcon color={color}  size={24} />)}} component={ContactScreen} />
-                </Drawer.Navigator>
-                
-            
-            </NavigationContainer>
-
-        )
     } else {
-        return (
-            <NavigationContainer>
-                <Stack.Navigator initialRouteName='SignUp'>
-                    <Stack.Screen name='Wellcome' options={{ headerShown: false }} component={WellcomeScreen} />
-                    <Stack.Screen name='Login' options={{ headerShown: false }} component={LoginScreen} />
-                    <Stack.Screen name="SignUp" options={{ headerShown: false }} component={SignUpScreen} />
-                    <Stack.Screen name="SignUpName" options={{ headerShown: false }} component={SignUpNameScreen} />
-                    <Stack.Screen name="Question1" options={{ headerShown: false }} component={Question1Screen} />
-                    <Stack.Screen name="Question2" options={{ headerShown: false, gestureEnabled:false }} component={Question2Screen} />
-                    <Stack.Screen name="Question3" options={{ headerShown: false, gestureEnabled:false }} component={Question3Screen} />
-                    <Stack.Screen name="Question4" options={{ headerShown: false, gestureEnabled:false }} component={Question4Screen} />
-                    <Stack.Screen name="Question5" options={{ headerShown: false, gestureEnabled:false }} component={Question5Screen} />
-                    <Stack.Screen name="Question6" options={{ headerShown: false, gestureEnabled:false }} component={Question6Screen} />
-                    <Stack.Screen name="Question7" options={{ headerShown: false, gestureEnabled:false }} component={Question7Screen} />
-                    <Stack.Screen name="Question8" options={{ headerShown: false, gestureEnabled:false }} component={Question8Screen} />
-                    <Stack.Screen name="Question9" options={{ headerShown: false, gestureEnabled:false }} component={Question9Screen} />
-                    <Stack.Screen name="Question10" options={{ headerShown: false, gestureEnabled:false }} component={Question10Screen} />
-                    <Stack.Screen name="Question11" options={{ headerShown: false, gestureEnabled:false }} component={Question11Screen} />
-                    <Stack.Screen name="ResultatFormation" options={{ headerShown: false, gestureEnabled:false }} component={ResultatFormation} />
-                    <Stack.Screen name="ResultatProduits" options={{ headerShown: false, gestureEnabled:false }} component={ResultatProduits} />
-                </Stack.Navigator>
-                
-            </NavigationContainer>
-        )
+        if (user) {
+
+            return (
+                <>
+                    <NavigationContainer>
+                        <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />}
+                            initialRouteName="Home"
+                            screenOptions={{
+                                drawerLabelStyle: { marginLeft: -25, fontSize: 15 },
+                                drawerActiveBackgroundColor: '#e7e5e4',
+                                drawerActiveTintColor: '#404040',
+                                drawerInactiveBackgroundColor: '#fff',
+                                drawerInactiveTintColor: '#737373'
+                            }}>
+                            <Drawer.Screen name="Home" options={{ drawerLabel: 'Accueil', title: 'Accueil', drawerIcon: ({ color }) => (<HomeIcon color={color} size={24} />) }}
+                                component={HomeScreen} />
+                            <Drawer.Screen name="Products" options={{ drawerLabel: 'Products', title: 'Products', drawerIcon: ({ color }) => (<ShoppingCartIcon color={color} size={24} />) }} component={ProductScreen} />
+                            <Drawer.Screen name="Formations" options={{ drawerLabel: 'Formations', title: 'Formations', drawerIcon: ({ color }) => (<RocketLaunchIcon color={color} size={24} />) }} component={FormationScreen} />
+                            <Drawer.Screen name="Contacts" options={{ drawerLabel: 'Contacts', title: 'Contacts', drawerIcon: ({ color }) => (<ChatBubbleLeftRightIcon color={color} size={24} />) }} component={ContactScreen} />
+                            <Drawer.Screen name="Commande" options={{ drawerLabel: '', drawerItemStyle: { display: 'none'}}} component={CommandeScreen} />
+                        </Drawer.Navigator>
+                    </NavigationContainer>
+
+                </>
+            )
+        } else {
+            return (
+                <NavigationContainer>
+                    <Stack.Navigator initialRouteName='SignUp'>
+                        <Stack.Screen name='Wellcome' options={{ headerShown: false }} component={WellcomeScreen} />
+                        <Stack.Screen name='Login' options={{ headerShown: false }} component={LoginScreen} />
+                        <Stack.Screen name="SignUp" options={{ headerShown: false }} component={SignUpScreen} />
+                        <Stack.Screen name="SignUpName" options={{ headerShown: false }} component={SignUpNameScreen} />
+                        <Stack.Screen name="Question1" options={{ headerShown: false }} component={Question1Screen} />
+                        <Stack.Screen name="Question2" options={{ headerShown: false, gestureEnabled: false }} component={Question2Screen} />
+                        <Stack.Screen name="Question3" options={{ headerShown: false, gestureEnabled: false }} component={Question3Screen} />
+                        <Stack.Screen name="Question4" options={{ headerShown: false, gestureEnabled: false }} component={Question4Screen} />
+                        <Stack.Screen name="Question5" options={{ headerShown: false, gestureEnabled: false }} component={Question5Screen} />
+                        <Stack.Screen name="Question6" options={{ headerShown: false, gestureEnabled: false }} component={Question6Screen} />
+                        <Stack.Screen name="Question7" options={{ headerShown: false, gestureEnabled: false }} component={Question7Screen} />
+                        <Stack.Screen name="Question8" options={{ headerShown: false, gestureEnabled: false }} component={Question8Screen} />
+                        <Stack.Screen name="Question9" options={{ headerShown: false, gestureEnabled: false }} component={Question9Screen} />
+                        <Stack.Screen name="Question10" options={{ headerShown: false, gestureEnabled: false }} component={Question10Screen} />
+                        <Stack.Screen name="Question11" options={{ headerShown: false, gestureEnabled: false }} component={Question11Screen} />
+                        <Stack.Screen name="ResultatFormation" options={{ headerShown: false, gestureEnabled: false }} component={ResultatFormation} />
+                        <Stack.Screen name="ResultatProduits" options={{ headerShown: false, gestureEnabled: false }} component={ResultatProduits} />
+                    </Stack.Navigator>
+
+                </NavigationContainer>
+            )
+        }
     }
-}
 }
