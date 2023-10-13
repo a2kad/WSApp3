@@ -39,8 +39,8 @@ export default function ResultatFormation() {
                 <View className='py-6'>
                     <Text className='font-bold text-4xl leading-10 text-gray-700 text-center py-4'>Votre résultat {count}/11</Text>
                 </View>
-                <View className='flex justify-center mx-5'>
-                    <Text className='text-justify text-xl text-gray-500'>Il serait préférable de vous inscrire à nos ateliers numériques.</Text>
+                <View className='flex justify-center mx-4'>
+                    <Text className='text-justify text-xl text-gray-600'>Il serait préférable de vous inscrire à nos ateliers numériques.</Text>
                     {/* <Text className='text-justify text-xl text-gray-500 my-2'>Notre Site Web :</Text>
                     <A style={{fontSize:20, color:'#0ea5e9', textDecorationLine:'underline'}} href='https://www.asso-websolidarite.org/'>www.asso-websolidarite.org</A> */}
                 </View>

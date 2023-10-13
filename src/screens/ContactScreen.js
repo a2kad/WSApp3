@@ -11,30 +11,37 @@ export default function ContactScreen() {
         const to = ['contact@asso-websolidarite.org'] // string or array of email addresses
         email(to, {
             subject: 'App Web Solidarité',
-            
+
         }).catch(console.error)
     }
-    
+
     return (
         <View className='flex-1 justify-top items-start'>
-
-            <Image style={styles.map} source={require('../../assets/image/map.png')}
-            />
-            
+            <TouchableOpacity style={styles.mapLink}  onPress={() => { Linking.openURL('https://maps.app.goo.gl/zGXqjg9FGx5xA6U28'); }}>
+                <Image style={styles.map} source={require('../../assets/image/map.png')} />
+            </TouchableOpacity>
             <Text style={styles.contactHead}>Nos Contacts</Text>
-            <Text style={styles.contactText}>Association Web Solidarité</Text>
+            <Text style={styles.contactTextBold}>Association Web Solidarité</Text>
             <Text style={styles.contactText}>48-50 Rue Albert Samain, 76620, Le Havre</Text>
-            <Text style={styles.contactText}>Site web : <Text style={styles.contactLink} onPress={()=>{Linking.openURL('https://www.asso-websolidarite.org');}}>www.asso-websolidarite.org</Text></Text>
+            <Text style={styles.contactText} onPress={() => { Linking.openURL('https://www.asso-websolidarite.org'); }}>
+                Site web : <Text style={styles.contactLink} >www.asso-websolidarite.org</Text>
+            </Text>
+
+
             <TouchableOpacity onPress={handleEmail}><Text style={styles.contactText}>Email : <Text className='text-cyan-600'>contact@asso-websolidarite.org</Text></Text></TouchableOpacity>
-            <Text style={styles.contactText} onPress={()=>{Linking.openURL('tel:0954149048');}}>Tél. : 09 54 14 90 48</Text>
-            
+            <Text style={styles.contactText} onPress={() => { Linking.openURL('tel:+33954149048'); }}>Tél. : <Text style={styles.contactLink} >09 54 14 90 48</Text></Text>
+
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     map: {
-
+        width: '100%',
+        height: '100%',
+        alignItems:'center'
+    },
+    mapLink: {
         width: '100%',
         height: '50%',
     },
@@ -48,12 +55,19 @@ const styles = StyleSheet.create({
         color: '#6b7280',
         fontSize: 18,
         paddingHorizontal: 20,
-        paddingTop:10
+        paddingTop: 10
+    },
+    contactTextBold: {
+        color: '#6b7280',
+        fontSize: 18,
+        fontWeight: 'bold',
+        paddingHorizontal: 20,
+        paddingTop: 10
     },
     contactLink: {
         color: '#0891b2',
         fontSize: 18,
         paddingHorizontal: 20,
-        paddingTop:10
+        paddingTop: 10
     }
 });

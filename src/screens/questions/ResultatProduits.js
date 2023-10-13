@@ -37,9 +37,9 @@ export default function ResultatFormation() {
                 <View className='py-6'>
                     <Text className='font-bold text-4xl leading-10 text-gray-700 text-center py-4'>Votre résultat {count}/11</Text>
                 </View>
-                <View className='flex justify-center mx-5'>
-                    <Text className='text-justify text-xl text-gray-500'>Bravo!</Text>
-                    <Text className='text-justify text-xl text-gray-500 my-2'>Nous vous suggérons d'acheter un ordinateur reconditionné à un prix solidaire pour un impact écologique .</Text>
+                <View className='flex justify-center mx-4'>
+                    <Text className='text-justify text-xl text-gray-600'>Bravo!</Text>
+                    <Text className='text-justify text-xl text-gray-600 my-2'>Nous vous suggérons d'acheter un ordinateur reconditionné à un prix solidaire pour un impact écologique .</Text>
                 </View>
                 <View className="space-y-4">
                     <TouchableOpacity
