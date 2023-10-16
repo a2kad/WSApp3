@@ -66,7 +66,7 @@ export default function AppNavigation() {
                             }}>
                             <Drawer.Screen name="Home" options={{ drawerLabel: 'Accueil', title: 'Accueil', drawerIcon: ({ color }) => (<HomeIcon color={color} size={24} />) }}
                                 component={HomeScreen} />
-                            <Drawer.Screen name="Products" options={{ drawerLabel: 'Products', title: 'Products', drawerIcon: ({ color }) => (<ShoppingCartIcon color={color} size={24} />) }} component={ProductScreen} />
+                            <Drawer.Screen name="Products" options={{ drawerLabel: 'Boutique Solidaire', title: 'Boutique Solidaire', drawerIcon: ({ color }) => (<ShoppingCartIcon color={color} size={24} />) }} component={ProductScreen} />
                             <Drawer.Screen name="Formations" options={{ drawerLabel: 'Formations', title: 'Formations', drawerIcon: ({ color }) => (<RocketLaunchIcon color={color} size={24} />) }} component={FormationScreen} />
                             <Drawer.Screen name="Contacts" options={{ drawerLabel: 'Contacts', title: 'Contacts', drawerIcon: ({ color }) => (<ChatBubbleLeftRightIcon color={color} size={24} />) }} component={ContactScreen} />
                             <Drawer.Screen name="Commande" options={{ drawerLabel: '', drawerItemStyle: { display: 'none'}}} component={CommandeScreen} />
