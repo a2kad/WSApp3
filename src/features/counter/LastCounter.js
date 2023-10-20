@@ -17,7 +17,6 @@ export const LastCounter = () => {
     const [isChecked5, setChecked5] = useState(false);
     const [isChecked6, setChecked6] = useState(false);
 
-
     const addPoint = () => {
         setButtonDis(true);
         dispatch(increment());
@@ -29,8 +28,6 @@ export const LastCounter = () => {
             console.log('Go produits. Count : ', count)
         }
     }
-
-    
 
     const zeroPoint = () => {
         //dispatch(increment());
@@ -44,32 +41,30 @@ export const LastCounter = () => {
     }
 
     return (
-        
+        <View
+            style={{ flexDirection: 'row', justifyContent: 'space-around', marginBottom: 44 }}
+            className='flex-row justify-around mb-11'>
+            <TouchableOpacity
+                onPress={addPoint}
+                disabled={buttonDis}
+                style={{ backgroundColor: '#facc15', paddingVertical: 12, paddingHorizontal: 28, marginHorizontal: 28, borderRadius: 12 }} >
+                <Text
+                    style={{ fontSize: 20, fontWeight: '700', color: '#374151', textAlign: 'center' }}
+                >
+                    Oui
+                </Text>
+            </TouchableOpacity>
 
-        <View 
-        style={{flexDirection:'row', justifyContent:'space-around', marginBottom:44}}
-        className='flex-row justify-around mb-11'>
-    <TouchableOpacity 
-        onPress={addPoint}
-        disabled={buttonDis}
-        style={{backgroundColor:'#facc15', paddingVertical:12, paddingHorizontal:28, marginHorizontal:28, borderRadius:12}} >
-        <Text 
-        style={{fontSize:20, fontWeight:'700', color:'#374151', textAlign:'center'}}
-        >
-        Oui
-        </Text>
-    </TouchableOpacity>
+            <TouchableOpacity
+                onPress={zeroPoint}
+                style={{ backgroundColor: '#facc15', paddingVertical: 12, paddingHorizontal: 28, marginHorizontal: 28, borderRadius: 12 }} >
+                <Text
+                    style={{ fontSize: 20, fontWeight: '700', color: '#374151', textAlign: 'center' }}
+                >
+                    Non
+                </Text>
+            </TouchableOpacity>
+        </View>
 
-    <TouchableOpacity 
-        onPress={zeroPoint}
-        style={{backgroundColor:'#facc15', paddingVertical:12, paddingHorizontal:28, marginHorizontal:28, borderRadius:12}} >
-        <Text 
-        style={{fontSize:20, fontWeight:'700', color:'#374151', textAlign:'center'}}
-        >
-        Non
-        </Text>
-    </TouchableOpacity>
-    </View>
-    
     );
 }

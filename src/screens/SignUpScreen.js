@@ -1,13 +1,10 @@
 import { View, Text, SafeAreaView, TouchableOpacity, TextInput, StyleSheet, Keyboard } from 'react-native'
 import React, { useRef, useState, useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../config/firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import PhoneInput from "react-native-phone-number-input";
 import validator from 'validator';
 import Toast from 'react-native-toast-message';
-import { normalizeCssSelector } from 'nativewind/dist/utils/selector';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 const SignUpScreen = () => {
@@ -18,7 +15,6 @@ const SignUpScreen = () => {
     const [value, setValue] = useState("");
     const [valid, setValid] = useState(false);
     const phoneInput = useRef(null);
-
     const [keyboardStatus, setKeyboardStatus] = useState(false);
 
     useEffect(() => {

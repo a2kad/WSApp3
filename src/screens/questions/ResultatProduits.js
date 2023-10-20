@@ -12,21 +12,20 @@ export default function ResultatFormation() {
     const {user} = useAuth();
     const getData = async () => {
         try {
+            // Nous lisons le numéro de téléphone et l'e-mail
             const phone = await AsyncStorage.getItem('phoneNumber');
             const email = await AsyncStorage.getItem('userEmail');
-            const password = await AsyncStorage.getItem('userPass');
-            console.log('Login : ',email)
-            console.log('Pass : ',password)
-            //await createUserWithEmailAndPassword(auth, email, password);
+            
+            // Autorisation anonyme
             let result = await signInAnonymously(auth);
             
+            // Nous enregistrons le numéro de téléphone et l'e-mail dans la base de données
             await addDoc(usersDb,{
                 phone: phone,
                 email: email,
                 count: count,
                 userId: result._tokenResponse.localId,
             });
-            
         } catch (e) {
             console.log('Read async data error : ',e.message)
         }

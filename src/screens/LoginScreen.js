@@ -13,12 +13,9 @@ const LoginScreen = () => {
         if (email && password) {
             try {
                 await signInWithEmailAndPassword(auth, email, password);
-
             } catch (err) {
                 console.log('Got error', err.message);
             }
-        } else {
-            
         }
     }
     return (
