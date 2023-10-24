@@ -3,7 +3,10 @@
 ## Description
 
 Application mobile pour l'association "Web Solidarité".
-Le framework React Native (Expo Go) est utilisé pour créer.
+
+Durant mon stage, j'ai développé une application mobile pour l'association Web Solidarité. L'association organise des formations à l'utilisation de l'informatique et la vente d'ordinateurs reconditionnés à prix solidaire. L'association disposant de deux versions du site : l'ancienne (publiée sur www.asso-websolidarite.org) et le nouveau (non publié), il ne nécessite pas de développement de site. Les clients potentiels de l’association n’ont pas d’ordinateur à la maison, mais possèdent presque tous un smartphone. L'association Web Solidarité a besoin d'une application mobile qui permettrait d'identifier les besoins des personnes et de proposer des formations ou un ordinateur reconditionné. 
+
+Le framework React Native a été choisi pour développer l'application. Il utilise JavaScript et ce langage de programmation a été étudié lors de formations à l'AFPA 
 
 ## Recommandations pour l'installation des modules
 
