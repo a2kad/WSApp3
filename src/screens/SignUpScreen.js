@@ -73,14 +73,14 @@ const SignUpScreen = () => {
             <SafeAreaView className='flex-1'>
             
                 <View className='flex-1 flex justify-around m-2' >
-                    <Text style={styles.head} className='font-bold  leading-10 text-gray-700 text-center my-2'>Bienvenue sur{"\n"}Web Solidarité App</Text>
+                    <Text style={styles.head} className='font-bold text-gray-700 text-center my-2'>Bienvenue sur{"\n"}Web Solidarité App</Text>
                     <View className='flex justify-center mx-4'>
                         <Text style={keyboardStatus ?styles.hidden  : styles.shown}>Renseigner votre numéro de téléphone et e-mail pour continuer</Text>
                     </View>
                     <View className='mx-5 '>
                         {/* <Text className='text-gray-700 my-2 p-2'>Numéro de téléphone</Text>
                 <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Téléphone'></TextInput> */}
-                        <Text className='text-gray-700 my-2 p-2'>Numéro de téléphone</Text>
+                        <Text  style={styles.fontSize} className='text-gray-700 my-2 p-2'>Numéro de téléphone</Text>
                         <PhoneInput
                             ref={phoneInput}
                             defaultValue={phoneNumber}
@@ -88,18 +88,18 @@ const SignUpScreen = () => {
                             onChangeText={(text) => { setValue(text) }}
                             onChangeFormattedText={(text) => { setPhoneNumber(text) }}
                             codeTextStyle={{ color: '#374151' }}
-                            containerStyle={{ borderRadius: 14 }}
+                            containerStyle={{ borderRadius: 14, width:'100%' }}
                             textContainerStyle={{ backgroundColor: '#e5e7eb', borderRadius: 14 }}
-                            textInputStyle={{ fontSize: 14 }}
+                            textInputStyle={{ fontSize: 16 }}
                             flagButtonStyle={{}}
                             placeholder='Numéro de téléphone' />
 
-                        <Text className='text-gray-700 my-2 p-2'>E-mail</Text>
-                        <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Entrer votre E-mail'
+                        <Text style={styles.fontSize} className='text-gray-700 my-2 p-2'>E-mail</Text>
+                        <TextInput style={styles.fontSize} className='p-5 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Entrer votre E-mail'
                             value={email} onChangeText={value => setEmail(value)}></TextInput>
                         {/* <Text className='text-gray-700 my-2 p-2'>Mot de passe</Text>
-                    <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Mot de passe' secureTextEntry
-                        value={password} onChangeText={value => setPassword(value)}></TextInput> */}
+                            <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Mot de passe' secureTextEntry
+                            value={password} onChangeText={value => setPassword(value)}></TextInput> */}
                     </View>
                     <View className="space-y-2">
                         <TouchableOpacity
@@ -131,6 +131,9 @@ const styles = StyleSheet.create({
         hidden:{ 
             color:'#6b7280',
             fontSize:hp('2%')
+        },
+        fontSize:{
+            fontSize:16,
         }
     })
     export default SignUpScreen
