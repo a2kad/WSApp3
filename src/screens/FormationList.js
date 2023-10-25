@@ -40,7 +40,7 @@ export default function FormationList() {
                             source={require('../../assets/image/formation/paper-plane.png')}
                             style={{ width: 120, height: 120, alignItems: 'center' }}
                         />
-                        <Text style={{ width: 150 }} className='text-center pt-6 text-lg'>Messagerier</Text>
+                        <Text style={{ width: 150 }} className='text-center pt-6 text-lg'>Messagerie</Text>
                     </TouchableOpacity>
                 </View>
 

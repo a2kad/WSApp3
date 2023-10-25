@@ -22,7 +22,7 @@ export default function HomeScreen({ navigation }) {
                 </View>
                 <View style={styles.productsHead}>
                     <Text style={styles.productsHeadText} >
-                        Nos products
+                        Nos produits
                     </Text>
                     <ProductList />
                 </View>

@@ -12,7 +12,7 @@ export default function Question7Screen() {
                     <Text className='font-bold text-4xl leading-10 text-gray-700 text-center py-4'>Question 7/11</Text>
                 </View>
                 <View className='flex justify-center mx-2'>
-                    <Text className='text-justify text-xl text-gray-500'>Êtes-vous à l'aise pour gérer votre espace personnel sur des sites institutionnels tels que Impôts, CAF, Mairie, Améli, Pôle-Emploi, ANTS ? </Text>
+                    <Text className='text-justify text-xl text-gray-500'>Êtes-vous à l'aise pour gérer votre espace personnel sur des sites institutionnels tels que Impôts, CAF, Mairie, Ameli.fr, Pôle-Emploi, ANTS ? </Text>
                 </View>
             </View>
             <View className='flex-row justify-around mb-11'>
