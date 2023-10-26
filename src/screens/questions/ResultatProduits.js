@@ -34,7 +34,7 @@ export default function ResultatFormation() {
         <SafeAreaView className='flex-1'>
             <View className='flex-1 justify-around items-center'>
                 <View className='py-6'>
-                    <Text className='font-bold text-4xl leading-10 text-gray-700 text-center mx-2 py-4'>Votre résultat {count}/11</Text>
+                    <Text className='font-bold text-4xl leading-10 text-gray-700 text-center mx-2 py-4'>Votre résultat {count}/12</Text>
                 </View>
                 <View className='flex justify-center mx-2'>
                     <Text className='text-xl text-gray-600'>Bravo!</Text>
