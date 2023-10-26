@@ -11,10 +11,10 @@ export default function Question10Screen() {
         <SafeAreaView className='flex-1'>
             <View className='flex-1 justify-top items-center m-6'>
                 <View className='py-6'>
-                    <Text className='font-bold text-4xl leading-10 text-gray-700 text-center py-4'>Question 10/11</Text>
+                    <Text className='font-bold text-4xl leading-10 text-gray-700 text-center py-4'>Question 10/12</Text>
                 </View>
-                <View className='flex justify-center mx-2'>
-                    <Text className='text-justify text-xl text-gray-500'>Seriez-vous en mesure d'identifier la taille d'un fichier (photo, PDF, audio, vidéo) ?</Text>
+                <View className='flex justify-center mx-1'>
+                    <Text className='text-xl text-gray-500'>Seriez-vous en mesure d'identifier la taille d'un fichier (photo, PDF, audio, vidéo) ?</Text>
                     
                 </View>
             </View>

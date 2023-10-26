@@ -19,6 +19,7 @@ import Question8Screen from '../screens/questions/Question8Screen';
 import Question9Screen from '../screens/questions/Question9Screen';
 import Question10Screen from '../screens/questions/Question10Screen';
 import Question11Screen from '../screens/questions/Question11Screen';
+import Question12Screen from '../screens/questions/Question12Screen';
 import useAuth from '../hooks/useAuth';
 import HomeScreen from '../screens/HomeScreen';
 import ProductScreen from '../screens/ProductScreen';
@@ -85,6 +86,7 @@ export default function AppNavigation() {
                         <Stack.Screen name="Question9" options={{ headerShown: false, gestureEnabled: false }} component={Question9Screen} />
                         <Stack.Screen name="Question10" options={{ headerShown: false, gestureEnabled: false }} component={Question10Screen} />
                         <Stack.Screen name="Question11" options={{ headerShown: false, gestureEnabled: false }} component={Question11Screen} />
+                        <Stack.Screen name="Question12" options={{ headerShown: false, gestureEnabled: false }} component={Question12Screen} />
                         <Stack.Screen name="ResultatFormation" options={{ headerShown: false, gestureEnabled: false }} component={ResultatFormation} />
                         <Stack.Screen name="ResultatProduits" options={{ headerShown: false, gestureEnabled: false }} component={ResultatProduits} />
                     </Stack.Navigator>

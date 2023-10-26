@@ -20,7 +20,7 @@ export const LastCounter = () => {
     const addPoint = () => {
         setButtonDis(true);
         dispatch(increment());
-        if (count <= 5) {
+        if (count <= 6) {
             navigation.navigate('ResultatFormation');
             console.log('Go formation. Count : ', count)
         } else {
@@ -31,7 +31,7 @@ export const LastCounter = () => {
 
     const zeroPoint = () => {
         //dispatch(increment());
-        if (count <= 5) {
+        if (count <= 6) {
             navigation.navigate('ResultatFormation');
             console.log('Go formation. Count : ', count)
         } else {
