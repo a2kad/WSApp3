@@ -101,6 +101,9 @@ const SignUpScreen = () => {
                             <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Mot de passe' secureTextEntry
                             value={password} onChangeText={value => setPassword(value)}></TextInput> */}
                     </View>
+                    <View className='justify-center items-center'>
+                        <Text style={styles.hidden} className='my-2 p-2'>En continuant, vous acceptez notre Politique de Confidentialité</Text>
+                    </View>
                     <View className="space-y-2">
                         <TouchableOpacity
                             onPress={storeData
