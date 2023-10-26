@@ -27,7 +27,7 @@ export default function FormationList() {
                 <View className="space-y-1 mr-4 bg-gray-200 p-6 justify-between">
                     <TouchableOpacity className="items-center" onPress={() => { Linking.openURL('https://www.asso-websolidarite.org/qui_sommes_nous.html'); }}>
                         <Image
-                            source={require('../../assets/image/formation/linux.png')}
+                            source={require('../../assets/image/formation/linux-ubuntu.png')}
                             style={{ width: 120, height: 120, alignItems: 'center' }}
                         />
                         <Text style={{ width: 150 }} className='text-center pt-6 text-lg'>Environnement Ubuntu</Text>
