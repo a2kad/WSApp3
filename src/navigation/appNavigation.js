@@ -8,6 +8,7 @@ import WellcomeScreen from '../screens/WellcomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import SignUpNameScreen from '../screens/SignUpNameScreen';
+import PolitiqueScreen from '../screens/PolitiqueScreen';
 import Question1Screen from '../screens/questions/Question1Screen';
 import Question2Screen from '../screens/questions/Question2Screen';
 import Question3Screen from '../screens/questions/Question3Screen';
@@ -76,6 +77,7 @@ export default function AppNavigation() {
                         <Stack.Screen name="SignUp" options={{ headerShown: false }} component={SignUpScreen} />
                         <Stack.Screen name="SignUpName" options={{ headerShown: false }} component={SignUpNameScreen} />
                         <Stack.Screen name="Question1" options={{ headerShown: false }} component={Question1Screen} />
+                        <Stack.Screen name="Politique" options={{ headerShown: true, title: 'Politique de Confidentialité' }} component={PolitiqueScreen} />
                         <Stack.Screen name="Question2" options={{ headerShown: false, gestureEnabled: false }} component={Question2Screen} />
                         <Stack.Screen name="Question3" options={{ headerShown: false, gestureEnabled: false }} component={Question3Screen} />
                         <Stack.Screen name="Question4" options={{ headerShown: false, gestureEnabled: false }} component={Question4Screen} />

@@ -54,7 +54,6 @@ const SignUpScreen = () => {
                     text2: "Le téléphone ou l'e-mail n'est pas valide",
                     position: 'bottom',
                 });
-
             }
         };
 
@@ -65,7 +64,6 @@ const SignUpScreen = () => {
                     navigation.navigate('SignUpName')
                 } catch (err) {
                     console.log('Got error', err.message);
-
                 }
             }
         }
@@ -73,9 +71,9 @@ const SignUpScreen = () => {
             <SafeAreaView className='flex-1'>
             
                 <View className='flex-1 flex justify-around m-2' >
-                    <Text style={styles.head} className='font-bold text-gray-700 text-center my-2'>Bienvenue sur{"\n"}Web Solidarité App</Text>
+                    <Text style={keyboardStatus ? styles.headKb : styles.head} className='font-bold text-gray-700 text-center my-2'>Bienvenue sur{"\n"}Web Solidarité App</Text>
                     <View className='flex justify-center mx-4'>
-                        <Text style={keyboardStatus ?styles.hidden  : styles.shown}>Renseigner votre numéro de téléphone et e-mail pour continuer</Text>
+                        <Text style={keyboardStatus ? styles.hidden  : styles.shown}>Renseigner votre numéro de téléphone et e-mail pour continuer</Text>
                     </View>
                     <View className='mx-5 '>
                         {/* <Text className='text-gray-700 my-2 p-2'>Numéro de téléphone</Text>
@@ -102,7 +100,7 @@ const SignUpScreen = () => {
                             value={password} onChangeText={value => setPassword(value)}></TextInput> */}
                     </View>
                     <View className='justify-center items-center'>
-                        <Text style={styles.hidden} className='my-2 p-2'>En continuant, vous acceptez notre Politique de Confidentialité</Text>
+                        <Text style={styles.politique} className='my-2 text-center'>En continuant, vous acceptez notre </Text><TouchableOpacity onPress={()=>{navigation.navigate('Politique')}}><Text style={styles.politiqueLink}>Politique de Confidentialité</Text></TouchableOpacity>
                     </View>
                     <View className="space-y-2">
                         <TouchableOpacity
@@ -127,6 +125,10 @@ const styles = StyleSheet.create({
         head: {
             fontSize: hp('5%')
         },
+        headKb: {
+            fontSize: hp('4%'),
+            marginTop:20
+        },
         shown:{
             color:'#6b7280',
             fontSize:hp('3%')
@@ -134,6 +136,16 @@ const styles = StyleSheet.create({
         hidden:{ 
             color:'#6b7280',
             fontSize:hp('2%')
+        },
+        politique:{ 
+            color:'#6b7280',
+            fontSize:12,
+            
+        },
+        politiqueLink:{ 
+            color:'#0891b2',
+            fontSize:12,
+            
         },
         fontSize:{
             fontSize:16,
