@@ -22,6 +22,7 @@ export default function ContactScreen() {
             </TouchableOpacity>
             <Text style={styles.contactHead}>Nos Contacts</Text>
             <Text style={styles.contactTextBold}>Association Web Solidarité</Text>
+            <Text style={styles.contactTextBold}>Locaux (Atelier et RDV) :</Text>
             <Text style={styles.contactText}>48-50 Rue Albert Samain, 76620, Le Havre</Text>
             <Text style={styles.contactText} onPress={() => { Linking.openURL('https://www.asso-websolidarite.org'); }}>
                 Site web : <Text style={styles.contactLink} >www.asso-websolidarite.org</Text>
@@ -29,7 +30,7 @@ export default function ContactScreen() {
 
 
             <TouchableOpacity onPress={handleEmail}><Text style={styles.contactText}>Email : <Text className='text-cyan-600'>contact@asso-websolidarite.org</Text></Text></TouchableOpacity>
-            <Text style={styles.contactText} onPress={() => { Linking.openURL('tel:+33954149048'); }}>Tél. : <Text style={styles.contactLink} >09 54 14 90 48</Text></Text>
+            <Text style={styles.contactText} onPress={() => { Linking.openURL('tel:+33954149048'); }}>Commerces Samain-TEL : <Text style={styles.contactLink} >09 54 14 90 48</Text></Text>
 
         </View>
     );

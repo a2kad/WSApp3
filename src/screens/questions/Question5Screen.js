@@ -12,7 +12,7 @@ export default function Question5Screen() {
                     <Text className='font-bold text-4xl leading-10 text-gray-700 text-center py-4'>Question 5/12</Text>
                 </View>
                 <View className='flex justify-center mx-1'>
-                    <Text className='text-xl text-gray-500'>Êtes-vous familier avec les bonnes pratiques pour éviter les arnaques en ligne ?  </Text>
+                    <Text className='text-xl text-gray-500'>Êtes vous familier avec les bonnes pratiques pour éviter les arnaques et se protéger des virus et autres infections sur internet ?</Text>
                 </View>
             </View>
             <View className='flex-row justify-around mb-11'>

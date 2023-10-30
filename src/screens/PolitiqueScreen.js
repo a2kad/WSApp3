@@ -10,16 +10,16 @@ export default function PolitiqueScreen() {
             <ScrollView>
                 <View style={styles.paragraph}>
                     <Text style={styles.paragraphText}>
-                        Web Solidarité a construit l'application Web Solidarité sous forme d'application gratuite. Ce SERVICE est fourni gratuitement par Web Solidarité et est destiné à être utilisé tel quel.
+                    Web Solidarité a créé l'application Web Solidarité en tant qu'application gratuite. Ce SERVICE est fourni par Web Solidarité à titre gratuit et est destiné à être utilisé "en l'état".
                     </Text>
                     <Text style={styles.paragraphText}>
-                        Cette page est utilisée pour informer les visiteurs de mes politiques en matière de collecte, d'utilisation et de divulgation d'informations personnelles si quelqu'un décide d'utiliser mon service.
+                    Cette page est utilisée pour informer les visiteurs de mes politiques concernant la collecte, l'utilisation et la divulgation d'informations personnelles si quelqu'un choisit d'utiliser notre Service.
                     </Text>
                     <Text style={styles.paragraphText}>
-                        Si vous choisissez d'utiliser mon service, vous acceptez la collecte et l'utilisation d'informations en relation avec cette politique. Les informations personnelles que je collecte sont utilisées pour fournir et améliorer le service. Je n’utiliserai ni ne partagerai vos informations avec qui que ce soit, sauf dans les cas décrits dans la présente politique de confidentialité.
+                    Si vous choisissez d'utiliser notre service, vous consentez à la collecte et à l'utilisation d'informations dans le cadre de cette politique. Les informations personnelles que nous recueillons sont utilisées pour fournir et améliorer le service. Nous n'utiliserons ni ne partagerons vos informations avec quiconque, sauf dans les cas décrits dans la présente politique de confidentialité.
                     </Text>
                     <Text style={styles.paragraphText}>
-                        Les termes utilisés dans la présente Politique de Confidentialité ont la même signification que dans nos Conditions Générales, qui sont accessibles sur Web Solidarité, sauf définition contraire dans la présente Politique de Confidentialité.
+                    Les termes utilisés dans la présente politique de confidentialité ont la même signification que dans nos conditions générales, qui sont disponibles sur le site Web Solidarité, sauf définition contraire dans la présente politique de confidentialité.
                     </Text>
                 </View>
                 <View style={styles.paragraph}>
@@ -27,13 +27,13 @@ export default function PolitiqueScreen() {
                         Collecte et utilisation des informations
                     </Text>
                     <Text style={styles.paragraphText}>
-                        Pour une meilleure expérience, lors de l'utilisation de notre Service, je peux vous demander de nous fournir certaines informations personnellement identifiables. Les informations que je demande seront conservées sur votre appareil et ne seront en aucun cas collectées par moi.
+                    Pour faciliter l'utilisation de notre service, nous pouvons vous demander de nous fournir certaines informations personnelles. Les informations que nous demandons seront stockées sur votre appareil et ne seront pas collectées par nous de quelque manière que ce soit.
                     </Text>
                     <Text style={styles.paragraphText}>
-                        L'application utilise des services tiers qui peuvent collecter des informations utilisées pour vous identifier.
+                    L'application utilise des services tiers qui peuvent collecter des informations permettant de vous identifier.
                     </Text>
                     <Text style={styles.paragraphText}>
-                        Lien vers la politique de confidentialité des prestataires de services tiers utilisés par l'application :
+                    Lien vers les politiques de confidentialité des fournisseurs de services tiers utilisés par l'application :
                     </Text>
                     <Text style={styles.paragraphList}>- Google Play Services</Text>
                     <Text style={styles.paragraphList}>- Expo</Text>
@@ -41,7 +41,7 @@ export default function PolitiqueScreen() {
                 <View style={styles.paragraph}>
                     <Text style={styles.paragraphTitle}>Données du journal</Text>
                     <Text style={styles.paragraphText}>
-                        Je tiens à vous informer que chaque fois que vous utilisez mon service, en cas d'erreur dans l'application, je collecte des données et des informations (via des produits tiers) sur votre téléphone appelées Log Data. Ces données de journal peuvent inclure des informations telles que l'adresse de protocole Internet (« IP ») de votre appareil, le nom de l'appareil, la version du système d'exploitation, la configuration de l'application lors de l'utilisation de mon service, l'heure et la date de votre utilisation du service et d'autres statistiques.
+                    Nous aimerions vous informer qu'à chaque fois que vous utilisez notre service, en cas d'erreur dans l'application, nous collectons des données et des informations (via des produits tiers) sur votre téléphone, appelées données de connexion (Log Data). Ces données de journal peuvent inclure des informations telles que l'adresse de protocole Internet ("IP") de votre appareil, le nom de l'appareil, la version du système d'exploitation, la configuration de l'application lorsque vous utilisez mon service, l'heure et la date auxquelles vous avez utilisé le service, ainsi que d'autres statistiques. 
                     </Text>
                 </View>
 
@@ -50,10 +50,10 @@ export default function PolitiqueScreen() {
                         Cookies
                     </Text>
                     <Text style={styles.paragraphText}>
-                        Les cookies sont des fichiers contenant une petite quantité de données qui sont couramment utilisés comme identifiants uniques anonymes. Ceux-ci sont envoyés à votre navigateur depuis les sites Internet que vous visitez et sont stockés dans la mémoire interne de votre appareil.
+                    Les cookies sont des fichiers contenant une petite quantité de données qui sont généralement utilisés comme identifiants uniques anonymes. Ils sont envoyés à votre navigateur par les sites web que vous visitez et sont stockés dans la mémoire interne de votre appareil.
                     </Text>
                     <Text style={styles.paragraphText}>
-                        Ce Service n'utilise pas explicitement ces « cookies ». Cependant, l'application peut utiliser du code et des bibliothèques tiers qui utilisent des « cookies » pour collecter des informations et améliorer leurs services. Vous avez la possibilité d'accepter ou de refuser ces cookies et de savoir quand un cookie est envoyé sur votre appareil. Si vous choisissez de refuser nos cookies, vous ne pourrez peut-être pas utiliser certaines parties de ce Service.
+                    Ce service n'utilise pas explicitement ces cookies. Cependant, l'application peut utiliser des codes et des bibliothèques de tiers qui utilisent des cookies pour collecter des informations et améliorer ses services. Vous avez la possibilité d'accepter ou de refuser ces cookies et de savoir quand un cookie est envoyé à votre appareil. Si vous choisissez de rejeter nos cookies, il se peut que vous ne puissiez pas utiliser certaines parties de notre service.
                     </Text>
                 </View>
 
@@ -62,7 +62,7 @@ export default function PolitiqueScreen() {
                         Les fournisseurs de services
                     </Text>
                     <Text style={styles.paragraphText}>
-                        Je peux employer des sociétés tierces et des particuliers pour les raisons suivantes :
+                    Nous pouvons engager des sociétés et des personnes tierces pour les raisons suivantes :
                     </Text>
                     <Text style={styles.paragraphList}>
                         - Pour faciliter notre Service;
@@ -71,14 +71,14 @@ export default function PolitiqueScreen() {
                         - Pour fournir le Service en notre nom;
                     </Text>
                     <Text style={styles.paragraphList}>
-                        - Pour exécuter des services liés au Service; ou
+                        - Pour fournir des services liés au service ; ou
                     </Text>
                     <Text style={styles.paragraphList}>
-                        - Pour nous aider à analyser la manière dont notre Service est utilisé.
+                        - Pour nous aider à analyser l'utilisation de notre service.
                     </Text>
                     <Text></Text>
                     <Text style={styles.paragraphText}>
-                        Je souhaite informer les utilisateurs de ce Service que ces tiers ont accès à leurs Informations Personnelles. La raison est d’accomplir les tâches qui leur sont assignées en notre nom. Ils sont toutefois tenus de ne pas divulguer ni utiliser ces informations à d’autres fins.
+                    Nous souhaitons informer les utilisateurs de ce service que ces tiers ont accès à leurs informations personnelles. La raison en est l'accomplissement des tâches qui leur sont assignées en notre nom. Toutefois, ils sont tenus de ne pas divulguer ou utiliser ces informations à d'autres fins.
                     </Text>
                 </View>
 
@@ -87,7 +87,7 @@ export default function PolitiqueScreen() {
                     Sécurité
                     </Text>
                     <Text style={styles.paragraphText}>
-                    J'apprécie la confiance que vous me témoignez en nous communiquant vos informations personnelles, et nous nous efforçons donc d'utiliser des moyens commercialement acceptables pour les protéger. Mais n'oubliez pas qu'aucune méthode de transmission sur l'internet ou de stockage électronique n'est sûre et fiable à 100 % et que je ne peux pas garantir une sécurité absolue.
+                    Nous apprécions la confiance que vous nous accordez en nous fournissant vos informations personnelles et nous nous efforçons donc d'utiliser des moyens commercialement acceptables pour les protéger. Mais n'oubliez pas qu'aucune méthode de transmission sur l'internet ou de stockage électronique n'est sûre à 100 % et que nous ne pouvons pas garantir une sécurité absolue.
                     </Text>
                 </View>
 
@@ -96,16 +96,16 @@ export default function PolitiqueScreen() {
                     Liens vers d'autres sites
                     </Text>
                     <Text style={styles.paragraphText}>
-                    Ce service peut contenir des liens vers d'autres sites. Si vous cliquez sur le lien d'un tiers, vous serez dirigé vers ce site. Notez que ces sites externes ne sont pas gérés par moi. Par conséquent, je vous conseille vivement de consulter la politique de confidentialité de ces sites web. Je n'ai aucun contrôle et n'assume aucune responsabilité quant au contenu, aux politiques de confidentialité ou aux pratiques des sites ou services tiers.
+                    Ce service peut contenir des liens vers d'autres sites. Si vous cliquez sur un lien externe, vous serez redirigé vers ce site. Veuillez noter que ces sites externes ne sont pas exploités par nous. Par conséquent, nous vous conseillons vivement de lire les politiques de confidentialité de ces sites. Nous n'avons aucun contrôle sur le contenu, les politiques de confidentialité ou les pratiques des sites ou services tiers, et nous n'en sommes pas responsables.
                     </Text>
                 </View>
 
                 <View style={styles.paragraph}>
                     <Text style={styles.paragraphTitle}>
-                    Vie privée des enfants
+                    Protection de la vie privée des enfants
                     </Text>
                     <Text style={styles.paragraphText}>
-                    Ces services ne s'adressent pas aux personnes âgées de moins de 13 ans. Je ne recueille pas sciemment d'informations personnellement identifiables auprès d'enfants âgés de moins de 13 ans. Si je découvre qu'un enfant de moins de 13 ans m'a fourni des informations personnelles, je les supprime immédiatement de nos serveurs. Si vous êtes un parent ou un tuteur et que vous savez que votre enfant nous a fourni des informations personnelles, veuillez me contacter afin que je puisse prendre les mesures nécessaires.
+                    Ces services ne sont pas destinés aux personnes de moins de 13 ans. Nous ne recueillons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Si je découvre qu'un enfant de moins de 13 ans nous a fourni des informations personnelles, nous les supprimons immédiatement de nos serveurs. Si vous êtes un parent ou un tuteur et que vous savez que votre enfant nous a fourni des informations personnelles, veuillez nous contacter afin que nous puissions prendre les mesures nécessaires.
                     </Text>
                 </View>
 
@@ -114,19 +114,18 @@ export default function PolitiqueScreen() {
                     Modifications de la présente politique de confidentialité
                     </Text>
                     <Text style={styles.paragraphText}>
-                    Je peux mettre à jour notre politique de confidentialité de temps à autre. Il vous est donc conseillé de consulter régulièrement cette page pour prendre connaissance des éventuelles modifications. Je vous informerai de toute modification en publiant la nouvelle politique de confidentialité sur cette page.
+                    Nous pouvons mettre à jour notre politique de confidentialité de temps à autre. Il est donc recommandé de consulter régulièrement cette page pour prendre connaissance d'éventuelles modifications. Nous vous informerons de toute modification en publiant la nouvelle politique de confidentialité sur cette page.
                     </Text>
                     <Text style={styles.paragraphText}>
-                    Cette politique entre en vigueur le 17/10/2023.
+                    Cette politique entre en vigueur le 17/10/2023
                     </Text>
                 </View>
-
                 <View style={styles.paragraph}>
                     <Text style={styles.paragraphTitle}>
                     Nous contacter
                     </Text>
                     <Text style={styles.paragraphText}>
-                    Si vous avez des questions ou des suggestions concernant ma politique de confidentialité, n'hésitez pas à me contacter à l'adresse <Text style={{fontWeight:'bold'}}>websolidarite.app@gmail.com</Text>.
+                    Si vous avez des questions ou des suggestions concernant notre politique de confidentialité, veuillez nous envoyer un courriel à <Text style={{fontWeight:'bold'}}>websolidarite.app@gmail.com</Text>.
                     </Text>
                 </View>
                 <View style={styles.paragraph}>

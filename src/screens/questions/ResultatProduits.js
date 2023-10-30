@@ -38,7 +38,7 @@ export default function ResultatFormation() {
                 </View>
                 <View className='flex justify-center mx-2'>
                     <Text className='text-xl text-gray-600'>Bravo!</Text>
-                    <Text className='text-xl text-gray-600 my-2'>Nous vous suggérons d'acheter un ordinateur reconditionné à un prix solidaire pour un impact écologique .</Text>
+                    <Text className='text-xl text-gray-600 my-2'>Nous vous suggérons de privilégier l'achat d'un ordinateur reconditionné ou d'un smartphone reconditionné à prix solidaire pour réduire les déchets D3E, et sensibiliser pour le Réemploi, limitant ainsi les impacts sur  l'environnement.</Text>
                 </View>
                 <View className="space-y-4">
                     <TouchableOpacity
