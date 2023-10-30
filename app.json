@@ -22,7 +22,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.a2kad.WSApp3"
+      "package": "com.a2kad.WSApp3",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
