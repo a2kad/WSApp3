@@ -34,9 +34,9 @@ export default function ResultatFormation() {
         <SafeAreaView className='flex-1'>
             <View className='flex-1 justify-around items-center'>
                 <View className='py-6'>
-                    <Text className='font-bold text-4xl leading-10 text-gray-700 text-center mx-2 py-4'>Votre résultat {count}/12</Text>
+                    <Text className='font-bold text-4xl leading-10 text-gray-700 text-center mx-4 py-4'>Votre résultat {count}/12</Text>
                 </View>
-                <View className='flex justify-center mx-2'>
+                <View className='flex justify-center mx-4'>
                     <Text className='text-xl text-gray-600'>Bravo!</Text>
                     <Text className='text-xl text-gray-600 my-2'>Nous vous suggérons de privilégier l'achat d'un ordinateur reconditionné ou d'un smartphone reconditionné à prix solidaire pour réduire les déchets D3E, et sensibiliser pour le Réemploi, limitant ainsi les impacts sur  l'environnement.</Text>
                 </View>
