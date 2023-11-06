@@ -8,13 +8,12 @@ import { collection, getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDMxL3o7UCk-6yZ8xGqkESq9m2yW1463qc",
-  authDomain: "web-solidarite-d99cc.firebaseapp.com",
-  projectId: "web-solidarite-d99cc",
-  storageBucket: "web-solidarite-d99cc.appspot.com",
-  messagingSenderId: "161566198637",
-  appId: "1:161566198637:web:632b5c3a7eb0c3115a2864",
-  measurementId: "G-D5GXP7XTMX"
+  apiKey: "AIzaSyDrZALiGkz5DNS4F8S27FIM445sJvn0IS4",
+  authDomain: "websolidariteapp-550c9.firebaseapp.com",
+  projectId: "websolidariteapp-550c9",
+  storageBucket: "websolidariteapp-550c9.appspot.com",
+  messagingSenderId: "254412882996",
+  appId: "1:254412882996:web:6811f9734acc0a64af3661"
 };
 
 // Initialize Firebase

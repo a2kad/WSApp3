@@ -127,7 +127,8 @@ const styles = StyleSheet.create({
         },
         headKb: {
             fontSize: hp('4%'),
-            marginTop:20
+            marginTop:20,
+            
         },
         shown:{
             color:'#6b7280',

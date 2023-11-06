@@ -29,9 +29,10 @@ import ResultatFormation from '../screens/questions/ResultatFormation';
 import ResultatProduits from '../screens/questions/ResultatProduits';
 import { HomeIcon } from "react-native-heroicons/mini";
 import { ShoppingCartIcon } from "react-native-heroicons/mini";
-import { RocketLaunchIcon, ChatBubbleLeftRightIcon } from "react-native-heroicons/mini";
+import { RocketLaunchIcon, ChatBubbleLeftRightIcon, IdentificationIcon } from "react-native-heroicons/mini";
 import CustomDrawer from '../screens/CustomDrawer';
 import ContactScreen from '../screens/ContactScreen';
+import InfoScreen from '../screens/InfoScreen';
 import { ActivityIndicator, View } from 'react-native';
 import CommandeScreen from '../screens/CommandeScreen';
 
@@ -64,6 +65,7 @@ export default function AppNavigation() {
                         <Drawer.Screen name="Products" options={{ drawerLabel: 'Boutique Solidaire', title: 'Boutique Solidaire', drawerIcon: ({ color }) => (<ShoppingCartIcon color={color} size={24} />) }} component={ProductScreen} />
                         <Drawer.Screen name="Formations" options={{ drawerLabel: 'Formations', title: 'Formations', drawerIcon: ({ color }) => (<RocketLaunchIcon color={color} size={24} />) }} component={FormationScreen} />
                         <Drawer.Screen name="Contacts" options={{ drawerLabel: 'Contacts', title: 'Contacts', drawerIcon: ({ color }) => (<ChatBubbleLeftRightIcon color={color} size={24} />) }} component={ContactScreen} />
+                        <Drawer.Screen name="MesInfos" options={{ drawerLabel: 'Mes Infos', title: 'Mes Infos', drawerIcon: ({ color }) => (<IdentificationIcon color={color} size={24} />) }} component={InfoScreen} />
                         <Drawer.Screen name="Commande" options={{ drawerLabel: '', drawerItemStyle: { display: 'none' } }} component={CommandeScreen} />
                     </Drawer.Navigator>
                 </NavigationContainer>
