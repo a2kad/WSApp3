@@ -20,12 +20,14 @@ export default function ResultatFormation() {
             let result = await signInAnonymously(auth);
             
             // Nous enregistrons le numéro de téléphone et l'e-mail dans la base de données
-            await addDoc(usersDb,{
+            const docRef = await addDoc(usersDb,{
                 phone: phone,
                 email: email,
                 count: count,
                 userId: result._tokenResponse.localId,
             });
+            console.log("Document written with ID: ", docRef.id);
+            await AsyncStorage.setItem('docRefId', docRef.id);
         } catch (e) {
             console.log('Read async data error : ',e.message)
         }
