@@ -22,13 +22,14 @@ export default function ResultatFormation() {
             //await createUserWithEmailAndPassword(auth, email, password);
             let result = await signInAnonymously(auth);
             console.log('Result anonimous registration: ',result)
-            await addDoc(usersDb,{
+            const docRef = await addDoc(usersDb,{
                 phone: phone,
                 email: email,
                 count: count,
                 userId: result._tokenResponse.localId,
             });
-            
+            console.log("Document written with ID: ", docRef.id);
+            await AsyncStorage.setItem('docRefId', docRef.id);
         } catch (e) {
             console.log('Read async data error : ',e.message)
         }
