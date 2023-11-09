@@ -2,7 +2,6 @@ import { StyleSheet, Text, View, TextInput, Pressable } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { db, usersDb, usersDbDoc } from '../config/firebase';
 import { deleteDoc, doc, getDoc, getDocs, setDoc, updateDoc } from 'firebase/firestore';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import useAuth from '../hooks/useAuth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert } from 'react-native';
@@ -15,9 +14,6 @@ export default function InfoSreen() {
     const [count, setCount] = useState()
     const { user } = useAuth();
     const navigation = useNavigation();
-    // console.log('1 user :', user.uid)
-    // const userUid = usersDb.id
-    // const docRef = doc(db, "users", userUid);
 
     useEffect(() => {
         getInfo()
@@ -46,12 +42,16 @@ export default function InfoSreen() {
     const updateInfo = async () => {
         try {
             const docRefId = await AsyncStorage.getItem('docRefId');
-            await setDoc(doc(db, "users", docRefId), {
-                phone: phone,
-                email: email,
-                count: count
-            })
-            console.log('Yes!')
+            if (email == 'Supprimé') {
+                console.log('Supprimé')
+            } else {
+                await setDoc(doc(db, "users", docRefId), {
+                    phone: phone,
+                    email: email,
+                    count: count
+                })
+                console.log('User info changed !')
+            }
         } catch (e) {
             console.log('Update info error : ', e.message)
         }
@@ -69,7 +69,6 @@ export default function InfoSreen() {
     }
 
     const deleteInfo = async () => {
-
         Alert.alert('Suppression d\'informations', 'Êtes-vous sûr?', [
             {
                 text: 'Annuler',
@@ -80,7 +79,6 @@ export default function InfoSreen() {
                 text: 'OK', onPress: del
             },
         ])
-
     }
     return (
         <View style={styles.container}>
@@ -118,7 +116,4 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginTop: 20
     },
-    fieldInput: {
-
-    }
 })

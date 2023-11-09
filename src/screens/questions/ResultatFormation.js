@@ -26,8 +26,10 @@ export default function ResultatFormation() {
                 phone: phone,
                 email: email,
                 count: count,
-                userId: result._tokenResponse.localId,
+                
             });
+            dispatch(setZero());
+            
             console.log("Document written with ID: ", docRef.id);
             await AsyncStorage.setItem('docRefId', docRef.id);
         } catch (e) {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { increment } from './counterSlice'
+import { increment, setZero } from './counterSlice'
 import { Text, TouchableOpacity } from 'react-native'
 
 import { useNavigation } from '@react-navigation/native';
@@ -17,6 +17,11 @@ export const Counter = (props) => {
         dispatch(increment());
         navigation.navigate(props.next);
         console.log('Count : ', count)
+    }
+
+    const resetPoints = () => {
+        dispatch(setZero())
+        console.log('Zero count : ', count)
     }
     return (
         <TouchableOpacity
