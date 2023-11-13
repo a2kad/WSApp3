@@ -66,7 +66,7 @@ export default function AppNavigation() {
                         <Drawer.Screen name="Formations" options={{ drawerLabel: 'Formations', title: 'Formations', drawerIcon: ({ color }) => (<RocketLaunchIcon color={color} size={24} />) }} component={FormationScreen} />
                         <Drawer.Screen name="Contacts" options={{ drawerLabel: 'Contacts', title: 'Contacts', drawerIcon: ({ color }) => (<ChatBubbleLeftRightIcon color={color} size={24} />) }} component={ContactScreen} />
                         <Drawer.Screen name="MesInfos" options={{ drawerLabel: 'Mes Infos', title: 'Mes Infos', drawerIcon: ({ color }) => (<IdentificationIcon color={color} size={24} />) }} component={InfoScreen} />
-                        <Drawer.Screen name="Commande" options={{ drawerLabel: '', drawerItemStyle: { display: 'none' } }} component={CommandeScreen} />
+                        
                     </Drawer.Navigator>
                 </NavigationContainer>
             )

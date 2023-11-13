@@ -6,6 +6,8 @@ import useAuth from '../hooks/useAuth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import validator from 'validator';
+import Toast from 'react-native-toast-message';
 
 
 export default function InfoSreen() {
@@ -45,12 +47,23 @@ export default function InfoSreen() {
             if (email == 'Supprimé') {
                 console.log('Supprimé')
             } else {
-                await setDoc(doc(db, "users", docRefId), {
+                if(validator.isEmail(email) && validator.isMobilePhone(phone)){
+                    await setDoc(doc(db, "users", docRefId), {
                     phone: phone,
                     email: email,
                     count: count
                 })
                 console.log('User info changed !')
+            }else{
+                console.log('User info isn\'t valid')
+                Toast.show({
+                    type: 'error',
+                    text1: 'Error',
+                    text2: "Le téléphone ou l'e-mail n'est pas valide",
+                    position: 'bottom',
+                });
+            }
+                
             }
         } catch (e) {
             console.log('Update info error : ', e.message)
