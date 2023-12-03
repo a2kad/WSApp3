@@ -36,8 +36,8 @@ const CustomDrawer = (props) => {
                 <DrawerItem labelStyle={{fontSize:15, color:'#737373'}} label={'Se déconnecter'} onPress={handleLogout} icon={()=>(<ArrowRightOnRectangleIcon marginRight={-24} color='#737373'  size={24} />)} />
             </DrawerContentScrollView>
             <View style={{ alignItems: 'flex-end', padding: 18 }}>
-            <TouchableOpacity onPress={()=>{Alert.alert('Web Solidarité App','Version 1.5.0\nCreated by Reshetnikov Ruslan')}}>
-                <Text style={{fontSize:12,color:'#d1d5db'}}>v.1.5.0</Text>
+            <TouchableOpacity onPress={()=>{Alert.alert('Web Solidarité App','Version 1.5.2\nCreated by Reshetnikov Ruslan')}}>
+                <Text style={{fontSize:12,color:'#d1d5db'}}>v.1.5.2</Text>
             </TouchableOpacity>
             </View>
         </View>

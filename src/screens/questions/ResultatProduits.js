@@ -1,14 +1,16 @@
 import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { auth, usersDb } from '../../config/firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createUserWithEmailAndPassword, getAdditionalUserInfo, signInAnonymously, updateProfile } from 'firebase/auth';
 import { addDoc } from 'firebase/firestore';
 import useAuth from '../../hooks/useAuth';
+import { setZero } from '../../features/counter/counterSlice';
 
 export default function ResultatFormation() {
     const count = useSelector(state => state.counter.value);
+    const dispatch = useDispatch()
     const {user} = useAuth();
     const getData = async () => {
         try {
@@ -26,6 +28,7 @@ export default function ResultatFormation() {
                 count: count,
                 userId: result._tokenResponse.localId,
             });
+            dispatch(setZero());
         } catch (e) {
             console.log('Read async data error : ',e.message)
         }
@@ -34,9 +37,9 @@ export default function ResultatFormation() {
         <SafeAreaView className='flex-1'>
             <View className='flex-1 justify-around items-center'>
                 <View className='py-6'>
-                    <Text className='font-bold text-4xl leading-10 text-gray-700 text-center mx-2 py-4'>Votre résultat {count}/12</Text>
+                    <Text className='font-bold text-4xl leading-10 text-gray-700 text-center mx-4 py-4'>Votre résultat {count}/12</Text>
                 </View>
-                <View className='flex justify-center mx-2'>
+                <View className='flex justify-center mx-4'>
                     <Text className='text-xl text-gray-600'>Bravo!</Text>
                     <Text className='text-xl text-gray-600 my-2'>Nous vous suggérons de privilégier l'achat d'un ordinateur reconditionné ou d'un smartphone reconditionné à prix solidaire pour réduire les déchets D3E, et sensibiliser pour le Réemploi, limitant ainsi les impacts sur  l'environnement.</Text>
                 </View>

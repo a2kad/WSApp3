@@ -73,7 +73,7 @@ const SignUpScreen = () => {
                 <View className='flex-1 flex justify-around m-2' >
                     <Text style={keyboardStatus ? styles.headKb : styles.head} className='font-bold text-gray-700 text-center my-2'>Bienvenue sur{"\n"}Web Solidarité App</Text>
                     <View className='flex justify-center mx-4'>
-                        <Text style={keyboardStatus ? styles.hidden  : styles.shown}>Renseigner votre numéro de téléphone et e-mail pour continuer</Text>
+                        <Text style={keyboardStatus ? styles.hidden  : styles.shown}>Renseignez votre numéro de téléphone et votre E-mail pour continuer</Text>
                     </View>
                     <View className='mx-5 '>
                         {/* <Text className='text-gray-700 my-2 p-2'>Numéro de téléphone</Text>
@@ -93,7 +93,7 @@ const SignUpScreen = () => {
                             placeholder='Numéro de téléphone' />
 
                         <Text style={styles.fontSize} className='text-gray-700 my-2 p-2'>E-mail</Text>
-                        <TextInput style={styles.fontSize} className='p-5 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Entrer votre E-mail'
+                        <TextInput style={styles.fontSize} className='p-5 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Entrez votre E-mail'
                             value={email} onChangeText={value => setEmail(value)}></TextInput>
                         {/* <Text className='text-gray-700 my-2 p-2'>Mot de passe</Text>
                             <TextInput className='p-4 bg-gray-200 text-gray-700 rounded-2xl' placeholder='Mot de passe' secureTextEntry

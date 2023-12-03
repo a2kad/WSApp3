@@ -1,15 +1,17 @@
 import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { auth, usersDb } from '../../config/firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createUserWithEmailAndPassword, signInAnonymously } from 'firebase/auth';
 import { A } from '@expo/html-elements';
 import { addDoc } from 'firebase/firestore';
 import useAuth from '../../hooks/useAuth';
+import { setZero } from '../../features/counter/counterSlice';
 
 export default function ResultatFormation() {
     const count = useSelector(state => state.counter.value);
+    const dispatch = useDispatch()
     const {user} = useAuth();
 
     const getData = async () => {
@@ -28,7 +30,7 @@ export default function ResultatFormation() {
                 count: count,
                 userId: result._tokenResponse.localId,
             });
-            
+            dispatch(setZero());
         } catch (e) {
             console.log('Read async data error : ',e.message)
         }
