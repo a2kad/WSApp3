@@ -23,10 +23,12 @@ export const Counter = (props) => {
             onPress={addPoint}
             activeOpacity={0.5}
             disabled={buttonDis}
-            style={{ backgroundColor: '#facc15', paddingVertical: 12, paddingHorizontal: 28, marginHorizontal: 28, borderRadius: 12 }} >
+            style={{ backgroundColor: '#facc15', paddingVertical: 12, 
+            paddingHorizontal: 28, marginHorizontal: 28, borderRadius: 12 }} >
             <Text
-                style={{ fontSize: 20, fontWeight: '700', color: '#374151', textAlign: 'center' }}
-            >
+                style={{ fontSize: 20, fontWeight: '700', color: '#374151',
+                textAlign: 'center' }} 
+                >
                 Oui
             </Text>
         </TouchableOpacity>

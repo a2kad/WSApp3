@@ -1,7 +1,6 @@
 import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Counter } from '../../features/counter/Counter';
 
 export default function Question1Screen() {
